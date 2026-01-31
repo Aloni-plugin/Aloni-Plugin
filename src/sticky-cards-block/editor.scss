@@ -1,0 +1,22 @@
+.wp-block-aloni-blocks-sticky-cards {
+	border: 2px dashed #0f0f0f;
+	background: #f5f5f5;
+
+	.sticky-cards-editor-preview {
+		padding: 40px;
+		text-align: center;
+
+		p {
+			margin: 0;
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+		.description {
+			margin-top: 10px;
+			font-size: 14px;
+			font-weight: 400;
+			opacity: 0.7;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+.liquidGlass-wrapper.navigation {
+	position: fixed;
+	top: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: auto;
+	max-width: 700px;
+	z-index: 2000;
+	padding: 0.4rem;
+	border-radius: 1.8rem;
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	box-shadow:
+		0 8px 16px rgba(0, 0, 0, 0.15),
+		0 2px 4px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+	&:hover {
+		padding: 0.6rem;
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		box-shadow:
+			0 8px 16px rgba(0, 0, 0, 0.15),
+			0 2px 4px rgba(0, 0, 0, 0.1),
+			inset 0 1px 0 rgba(255, 255, 255, 0.8);
+	}
+
+	.liquidGlass-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		padding: 0.6rem 1.5rem;
+		border-radius: 1.4rem;
+	}
+}
+
+.nav-link {
+	color: rgba(0, 0, 0, 0.85);
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 500;
+	white-space: nowrap;
+	padding: 0.4rem 0.6rem;
+	border-radius: 0.8rem;
+	transition: all 0.1s ease-in;
+
+	&:hover {
+		color: rgba(0, 0, 0, 1);
+		background-color: rgba(255, 255, 255, 0.5);
+		box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(2px);
+	}
+}

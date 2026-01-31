@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aloni-blocks/sticky-cards",
+	"version": "0.1.0",
+	"title": "Sticky Cards Animation",
+	"category": "widgets",
+	"icon": "images-alt2",
+	"description": "Animated card flip section with GSAP ScrollTrigger.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "sticky-cards",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-view.css",
+	"viewScript": "file:./view.js"
+}

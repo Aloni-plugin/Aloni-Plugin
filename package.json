@@ -17,9 +17,15 @@
 	"dependencies": {
 		"@wordpress/block-editor": "latest",
 		"@wordpress/blocks": "latest",
-		"@wordpress/i18n": "latest"
+		"@wordpress/element": "^6.37.0",
+		"@wordpress/i18n": "latest",
+		"gsap": "^3.14.2",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
 	},
 	"devDependencies": {
+		"@types/react": "^19.2.7",
+		"@types/react-dom": "^19.2.3",
 		"@wordpress/scripts": "^31.2.0"
 	}
 }

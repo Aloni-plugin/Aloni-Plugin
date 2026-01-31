@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+
+// Import partials in order
+@import "styles/variables";
+@import "styles/reset";
+@import "styles/typography";
+// @import "styles/wordpress-overrides";
+@import "styles/sticky-cards";
+@import "styles/liquid-glass";
+@import "styles/navigation";
+@import "styles/mobile-navigation";
