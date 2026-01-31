@@ -171,31 +171,72 @@ export const StickyCardsSection = () => {
 			<div className="card-container" ref={cardContainerRef}>
 				<div className="card" id="card-1" ref={card1Ref}>
 					<div className="card-front">
-						<img src="https://i.ibb.co/4wShfg0B/image-part-001.jpg" alt="image part 001"/>
+						<img src="/wp-content/plugins/Aloni-Plugin/images/Main-card-left.png" alt="Left Section"/>
 					</div>
 					<div className="card-back">
-						<span>01</span>
-						<p>Interactive Web Experiences</p>
+						<img src="/wp-content/plugins/Aloni-Plugin/images/card-back-1.png" alt="Card 1 back"/>
+						<div className="card-overlay">
+							<div className="card-content">
+								<h2 className="card-title">Kapsalon</h2>
+								<p className="card-subtitle">deniz</p>
+								<div className="card-buttons">
+									<button className="card-btn card-btn-primary">
+										<span className="btn-icon">🏠</span>
+										Over de salon
+									</button>
+									<button className="card-btn card-btn-secondary">
+										<span className="btn-icon">📋</span>
+										Onze prijslijst
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<div className="card" id="card-2" ref={card2Ref}>
 					<div className="card-front">
-						<img src="https://i.ibb.co/Y4MSmLXB/image-part-002.jpg" alt="image part 002"/>
+						<img src="/wp-content/plugins/Aloni-Plugin/images/Main-card-center.png" alt="Center Section"/>
 					</div>
 					<div className="card-back">
-						<span>02</span>
-						<p>Thoughtful Design Language</p>
+						<img src="/wp-content/plugins/Aloni-Plugin/images/card-back-2.png" alt="Card 2 back"/>
+						<div className="card-overlay">
+							<div className="card-content">
+								<h2 className="card-title">Atelier</h2>
+								<p className="card-subtitle">deniz</p>
+								<div className="card-buttons">
+									<button className="card-btn card-btn-primary">
+										<span className="btn-icon">🏠</span>
+										Over het atelier
+									</button>
+									<button className="card-btn card-btn-secondary">
+										<span className="btn-icon">📋</span>
+										Onze prijslijst
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<div className="card" id="card-3" ref={card3Ref}>
 					<div className="card-front">
-						<img src="https://i.ibb.co/NkrBdsq/image-part-003.jpg" alt="image part 003"/>
+						<img src="/wp-content/plugins/Aloni-Plugin/images/Main-card-right.png" alt="Right Section"/>
 					</div>
 					<div className="card-back">
-						<span>03</span>
-						<p>Visual Design Systems</p>
+						<img src="/wp-content/plugins/Aloni-Plugin/images/card-back-3.png" alt="Card 3 back"/>
+						<div className="card-overlay">
+							<div className="card-content">
+								<h2 className="card-title">Onze</h2>
+								<p className="card-subtitle">Producten</p>
+								<div className="card-buttons">
+									<button className="card-btn card-btn-primary">
+										<span className="btn-icon">🛍️</span>
+										Onze producten
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
