@@ -1,13 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:wght@400;500;700;900&family=Licorice&display=swap");
-
-// Import partials in order
-@import "styles/variables";
-@import "styles/reset";
-@import "styles/typography";
-// @import "styles/wordpress-overrides";
-@import "styles/sticky-cards";
-@import "styles/liquid-glass";
-@import "styles/navigation";
-@import "styles/mobile-navigation";
 @import "styles/diagonalCutSection";
-@import "styles/contact-cards";
+@import "styles/sticky-cards";
+@import "../shared/styles/shared-style";
+

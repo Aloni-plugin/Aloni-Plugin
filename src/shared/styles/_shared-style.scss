@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:wght@400;500;700;900&family=Licorice&display=swap");
+
+// Import partials in order
+@import "variables";
+@import "reset";
+@import "typography";
+@import "liquid-glass";
+@import "navigation";
+@import "mobile-navigation";
+@import "contact-cards";
+@import "hero-header";
+@import "information-with-photos";
+@import "footer";

@@ -1,17 +1,17 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "aloni-blocks/b-block",
+	"name": "aloni-blocks/kapsalon-block",
 	"version": "0.1.0",
-	"title": "B Block",
+	"title": "Kapsalon homepage",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"icon": "images-alt2",
+	"description": "The complete kapsalon homepage",
 	"example": {},
 	"supports": {
 		"html": false
 	},
-	"textdomain": "b-block",
+	"textdomain": "kapsalon-homepage",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
