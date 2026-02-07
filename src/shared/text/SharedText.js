@@ -1,4 +1,48 @@
 export const SharedText = {
+	hero: {
+		barber: {
+			image: "/wp-content/plugins/Aloni-Plugin/images/kapsalon-homepage.png",
+			heading: "Klaar voor iets nieuws?",
+			primaryButton: {
+				text: "Afspraak maken",
+				href: "/afspraak",
+				backgroundColor: "#F86060",
+				textColor: "#ffffff"
+			},
+			secondaryButton: {
+				text: "Onze prijslijst",
+				href: "/prijslijst",
+				backgroundColor: "transparent",
+				textColor: "#ffffff",
+				borderColor: "#ffffff"
+			},
+			logo: {
+				topText: "Kapsalon",
+				bottomText: "Deniz"
+			}
+		},
+		tailor: {
+			image: "/wp-content/plugins/Aloni-Plugin/images/kleding-reperatie-hero.png",
+			heading: "Klaar voor iets nieuws?",
+			primaryButton: {
+				text: "Neem contact op",
+				href: "/contact",
+				backgroundColor: "#F86060",
+				textColor: "#ffffff"
+			},
+			secondaryButton: {
+				text: "Onze prijslijst",
+				href: "/prijslijst",
+				backgroundColor: "transparent",
+				textColor: "#ffffff",
+				borderColor: "#ffffff"
+			},
+			logo: {
+				topText: "Atelier",
+				bottomText: "Deniz"
+			}
+		}
+	},
 	informationWithPhotos: {
 		barber: {
 			men: {
