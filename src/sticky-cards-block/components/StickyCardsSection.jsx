@@ -180,14 +180,14 @@ export const StickyCardsSection = () => {
 								<h2 className="card-title">Kapsalon</h2>
 								<p className="card-subtitle">deniz</p>
 								<div className="card-buttons">
-									<button className="card-btn card-btn-primary">
+									<a href="/kapsalon" className="card-btn card-btn-primary">
 										<span className="btn-icon">🏠</span>
 										Over de salon
-									</button>
-									<button className="card-btn card-btn-secondary">
+									</a>
+									<a href="/kapper-prijslijst" className="card-btn card-btn-secondary">
 										<span className="btn-icon">📋</span>
 										Onze prijslijst
-									</button>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -205,14 +205,14 @@ export const StickyCardsSection = () => {
 								<h2 className="card-title">Atelier</h2>
 								<p className="card-subtitle">deniz</p>
 								<div className="card-buttons">
-									<button className="card-btn card-btn-primary">
+									<a href="/atelier" className="card-btn card-btn-primary">
 										<span className="btn-icon">🏠</span>
 										Over het atelier
-									</button>
-									<button className="card-btn card-btn-secondary">
+									</a>
+									<a href="/atelier-prijslijst" className="card-btn card-btn-secondary">
 										<span className="btn-icon">📋</span>
 										Onze prijslijst
-									</button>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -230,10 +230,13 @@ export const StickyCardsSection = () => {
 								<h2 className="card-title">Onze</h2>
 								<p className="card-subtitle">Producten</p>
 								<div className="card-buttons">
-									<button className="card-btn card-btn-primary">
-										<span className="btn-icon">🛍️</span>
-										Onze producten
-									</button>
+									<div className="button-wrapper">
+										<button className="card-btn card-btn-primary" disabled>
+											<span className="btn-icon">🛍️</span>
+											Onze producten
+										</button>
+										<span className="coming-soon-badge">Binnenkort</span>
+									</div>
 								</div>
 							</div>
 						</div>

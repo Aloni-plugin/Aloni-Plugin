@@ -22,7 +22,7 @@ export const HeroSection = ({
 				<h2 className="hero-heading">{heading}</h2>
 
 				<div className="hero-buttons">
-					<ButtonWrapper
+					{primaryButton && <ButtonWrapper
 						href={primaryButton.href}
 						className="btn-primary"
 						style={{
@@ -32,8 +32,8 @@ export const HeroSection = ({
 						}}
 					>
 						{primaryButton.text}
-					</ButtonWrapper>
-					<ButtonWrapper
+					</ButtonWrapper>}
+					{secondaryButton && <ButtonWrapper
 						href={secondaryButton.href}
 						className="btn-secondary"
 						style={{
@@ -43,7 +43,7 @@ export const HeroSection = ({
 						}}
 					>
 						{secondaryButton.text}
-					</ButtonWrapper>
+					</ButtonWrapper>}
 				</div>
 
 				<div className="hero-logo">

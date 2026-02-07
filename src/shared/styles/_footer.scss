@@ -183,3 +183,15 @@
 		padding: 0.65rem 1.25rem;
 	}
 }
+
+.footer-link-disabled {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #ffffff;
+	text-decoration: none;
+	opacity: 0.5;
+	cursor: not-allowed;
+	filter: grayscale(50%);
+}
+

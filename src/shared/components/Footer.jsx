@@ -12,34 +12,34 @@ export const Footer = () => {
 					<div className="footer-column">
 						<h3 className="footer-heading">Snel naar...</h3>
 						<ul>
-							<li><a href="#over-ons">Over ons</a></li>
-							<li><a href="#wat-we-doen">Wat we doen</a></li>
-							<li><a href="#contact">Contact</a></li>
+							<li><a href="/reserveren">Afspraak maken</a></li>
+							<li><a href="/contact">Contact</a></li>
 						</ul>
 					</div>
 
 					<div className="footer-column">
 						<h3 className="footer-heading">Kapsalon</h3>
 						<ul>
-							<li><a href="#prijslijst">Prijslijst</a></li>
-							<li><a href="#beoordelingen">Beoordelingen</a></li>
-							<li><a href="#afspraak">Afspraak maken</a></li>
+							<li><a href="/kapsalon">Over ons</a></li>
+							<li><a href="/kapper-prijslijst">Prijslijst</a></li>
+							<li><a href="/beoordelingen">Beoordelingen</a></li>
+							<li><a href="/reserveren">Afspraak maken</a></li>
 						</ul>
 					</div>
 
 					<div className="footer-column">
 						<h3 className="footer-heading">Atelier</h3>
 						<ul>
-							<li><a href="#prijslijst">Prijslijst</a></li>
-							<li><a href="#beoordelingen">Beoordelingen</a></li>
+							<li><a href="/atelier">Over ons</a></li>
+							<li><a href="/atelier-prijslijst">Prijslijst</a></li>
 						</ul>
 					</div>
 
 					<div className="footer-column">
 						<h3 className="footer-heading">Producten</h3>
 						<ul>
-							<li><a href="#parfums">Parfums en geurtjes</a></li>
-							<li><a href="#haarproducten">Haarproducten</a></li>
+							<li><span className="footer-link-disabled">Parfums en geurtjes</span></li>
+							<li><span className="footer-link-disabled">Haarproducten</span></li>
 						</ul>
 					</div>
 				</div>
