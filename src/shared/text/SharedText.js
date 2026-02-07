@@ -70,48 +70,6 @@ export const SharedText = {
 				topText: "Kapsalon",
 				bottomText: "Deniz"
 			}
-		},
-		tailor: {
-			image: "/wp-content/plugins/Aloni-Plugin/images/kleding-reperatie-hero.png",
-			heading: "Klaar voor iets nieuws?",
-			primaryButton: {
-				text: "Neem contact op",
-				href: "/contact",
-				backgroundColor: "#F86060",
-				textColor: "#ffffff"
-			},
-			secondaryButton: {
-				text: "Onze prijslijst",
-				href: "/prijslijst",
-				backgroundColor: "transparent",
-				textColor: "#ffffff",
-				borderColor: "#ffffff"
-			},
-			logo: {
-				topText: "Atelier",
-				bottomText: "Deniz"
-			}
-		},
-		reviews: {
-			image: "/wp-content/plugins/Aloni-Plugin/images/kapsalon-homepage.png",
-			heading: "Wat onze klanten zeggen",
-			primaryButton: {
-				text: "Afspraak maken",
-				href: "/afspraak",
-				backgroundColor: "#F86060",
-				textColor: "#ffffff"
-			},
-			secondaryButton: {
-				text: "Onze prijslijst",
-				href: "/prijslijst",
-				backgroundColor: "transparent",
-				textColor: "#ffffff",
-				borderColor: "#ffffff"
-			},
-			logo: {
-				topText: "Kapsalon",
-				bottomText: "Deniz"
-			}
 		}
 	},
 	informationWithPhotos: {
