@@ -80,3 +80,34 @@ function register_kapsalon_booking_block() {
 }
 add_action('init', 'register_kapsalon_booking_block');
 
+// Render function for your review page block
+function render_kapsalon_review_block() {
+    ob_start();
+    ?>
+    <div data-kapsalon-review="true"></div>
+    <div class="site-reviews-section">
+        <div class="site-reviews-columns">
+            <div class="site-reviews-form-column">
+                <h2 class="site-reviews-heading">Jouw beoordeling</h2>
+                <?php echo do_shortcode('[site_reviews_form]'); ?>
+            </div>
+            <div class="site-reviews-list-column">
+                <h2 class="site-reviews-heading">Beoordelingen</h2>
+                <?php echo do_shortcode('[site_reviews display=10 pagination="ajax" schema=true]'); ?>
+            </div>
+        </div>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+
+// Register the review block
+function register_kapsalon_review_block() {
+    register_block_type('kapsalon/review-page', array(
+        'render_callback' => 'render_kapsalon_review_block',
+        'editor_script' => 'kapsalon-review-editor',
+        'script' => 'kapsalon-review-view'
+    ));
+}
+add_action('init', 'register_kapsalon_review_block');
+
