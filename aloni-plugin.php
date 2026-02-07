@@ -111,3 +111,22 @@ function register_kapsalon_review_block() {
 }
 add_action('init', 'register_kapsalon_review_block');
 
+// Render function for the prices page block
+function render_kapsalon_prices_block() {
+    ob_start();
+    ?>
+    <div data-kapsalon-prices="true"></div>
+    <?php
+    return ob_get_clean();
+}
+
+// Register the prices block
+function register_kapsalon_prices_block() {
+    register_block_type('kapsalon/prices-page', array(
+        'render_callback' => 'render_kapsalon_prices_block',
+        'editor_script' => 'kapsalon-prices-editor',
+        'script' => 'kapsalon-prices-view'
+    ));
+}
+add_action('init', 'register_kapsalon_prices_block');
+

@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aloni-blocks/kapsalon-prices-block",
+	"version": "0.1.0",
+	"title": "Kapsalon Prijslijst",
+	"category": "widgets",
+	"icon": "list-view",
+	"description": "The barber price list page",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "kapsalon-prices-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

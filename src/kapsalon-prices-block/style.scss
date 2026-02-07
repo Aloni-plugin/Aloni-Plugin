@@ -1,0 +1,161 @@
+@import "../shared/styles/shared-style";
+
+/* =========================================================
+   Prijslijst Section
+   ========================================================= */
+
+.kapsalon-prices-wrapper {
+	overflow: visible;
+	height: auto;
+}
+
+[data-kapsalon-prices="true"] {
+	overflow: visible;
+	height: auto;
+}
+
+.prijslijst-section {
+	padding: 80px 60px;
+	background: #ffffff;
+}
+
+.prijslijst-container {
+	display: flex;
+	gap: 120px;
+	max-width: 1440px;
+	margin: 0 auto;
+	align-items: flex-start;
+}
+
+/* ---------------------------------------------------------
+   Left sidebar – category buttons
+   --------------------------------------------------------- */
+.prijslijst-categories {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	flex-shrink: 0;
+	min-width: 160px;
+}
+
+.prijslijst-category-btn {
+	all: unset;
+	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+	font-size: 54px;
+	line-height: 100%;
+	letter-spacing: -0.05em;
+	color: #000000;
+	transition: color 0.2s ease;
+	user-select: none;
+
+	&:hover {
+		color: #F86060;
+	}
+
+	&--active {
+		color: #F86060;
+	}
+}
+
+/* ---------------------------------------------------------
+   Right side – services list
+   --------------------------------------------------------- */
+.prijslijst-services {
+	flex: 1;
+	max-width: 1060px;
+	margin-top: 80px;
+}
+
+.prijslijst-services-title {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+	font-size: 54px;
+	line-height: 100%;
+	letter-spacing: -0.07em;
+	color: #F86060;
+	margin: 0 0 24px 0;
+}
+
+.prijslijst-services-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.prijslijst-service-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 16px 0;
+	border-bottom: 2px solid #F86060;
+}
+
+.prijslijst-service-name {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 100%;
+	letter-spacing: -0.03em;
+	color: #000000;
+}
+
+.prijslijst-service-price {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 100%;
+	letter-spacing: -0.03em;
+	color: #000000;
+	white-space: nowrap;
+	margin-left: 40px;
+}
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+@media (max-width: 1024px) {
+	.prijslijst-container {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.prijslijst-categories {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 12px 24px;
+		min-width: unset;
+	}
+
+	.prijslijst-category-btn {
+		font-size: 32px;
+	}
+
+	.prijslijst-services-title {
+		font-size: 36px;
+	}
+
+	.prijslijst-section {
+		padding: 48px 24px;
+	}
+}
+
+@media (max-width: 600px) {
+	.prijslijst-category-btn {
+		font-size: 24px;
+	}
+
+	.prijslijst-services-title {
+		font-size: 28px;
+	}
+
+	.prijslijst-service-name,
+	.prijslijst-service-price {
+		font-size: 18px;
+	}
+
+	.prijslijst-section {
+		padding: 32px 16px;
+	}
+}
