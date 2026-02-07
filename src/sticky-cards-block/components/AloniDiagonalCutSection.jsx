@@ -129,7 +129,7 @@ export const DiagonalCutSection = ({
 							className="CTAButton is-secondary"
 							onClick={onButtonClick || (() => window.location.href = '/contact')}
 						>
-							Kleding afspraak
+							Contact opnemen
 						</button>
 					</div>
 				</div>

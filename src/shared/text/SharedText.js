@@ -83,8 +83,16 @@ export const SharedText = {
 				],
 				backgroundColor: "#4A5D52",
 				textColor: "#ffffff",
-				buttonPrimaryColor: "#ffffff",
-				buttonSecondaryBorder: "#ffffff",
+				primaryButton: {
+					text: "Afspraak maken",
+					href: "/reserveren",
+					backgroundColor: "#4A5D52"
+				},
+				secondaryButton: {
+					text: "Onze prijslijst",
+					href: "/kapper-prijslijst",
+					borderColor: "#ffffff"
+				},
 				photos: [
 					"/wp-content/plugins/Aloni-plugin/images/barber-information-1.png",
 					"/wp-content/plugins/Aloni-plugin/images/barber-information-2.png",
@@ -100,8 +108,16 @@ export const SharedText = {
 				],
 				backgroundColor: "#F86060",
 				textColor: "#ffffff",
-				buttonPrimaryColor: "#ffffff",
-				buttonSecondaryBorder: "#ffffff",
+				primaryButton: {
+					text: "Afspraak maken",
+					href: "/reserveren",
+					backgroundColor: "#4A5D52"
+				},
+				secondaryButton: {
+					text: "Onze prijslijst",
+					href: "/kapper-prijslijst",
+					borderColor: "#ffffff"
+				},
 				photos: [
 					"/wp-content/plugins/Aloni-plugin/images/barber-information-1.png",
 					"/wp-content/plugins/Aloni-plugin/images/barber-information-2.png",
@@ -118,8 +134,16 @@ export const SharedText = {
 			],
 			backgroundColor: "#4A5D52",
 			textColor: "#ffffff",
-			buttonPrimaryColor: "#ffffff",
-			buttonSecondaryBorder: "#ffffff",
+			primaryButton: {
+				text: "Neem contact op",
+				href: "/contact",
+				backgroundColor: "#ffffff"
+			},
+			secondaryButton: {
+				text: "Onze prijslijst",
+				href: "/atelier-prijslijst",
+				borderColor: "#ffffff"
+			},
 			photos: [
 				"/wp-content/plugins/Aloni-plugin/images/tailor-information-1.png",
 				"/wp-content/plugins/Aloni-plugin/images/tailor-information-2.png",

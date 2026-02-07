@@ -1,15 +1,17 @@
 import React from 'react';
 
 export const InformationWithPhotos = ({
-								   title,
-								   titleItalic,
-								   paragraphs,
-								   backgroundColor,
-								   textColor = '#ffffff',
-								   buttonPrimaryColor = '#F86060',
-								   buttonSecondaryBorder = '#ffffff',
-								   photos = []
-							   }) => {
+										  title,
+										  titleItalic,
+										  paragraphs,
+										  backgroundColor,
+										  textColor = '#ffffff',
+										  buttonPrimaryColor = '#F86060',
+										  buttonSecondaryBorder = '#ffffff',
+										  photos = [],
+										  primaryButton = {},
+										  secondaryButton = {}
+									  }) => {
 	return (
 		<section className="info-photos-section">
 			<div className="info-photos-container" style={{ backgroundColor }}>
@@ -25,22 +27,31 @@ export const InformationWithPhotos = ({
 					</div>
 
 					<div className="info-photos-buttons">
-						<button
-							className="btn-primary"
-							style={{ backgroundColor: buttonPrimaryColor, borderColor: buttonPrimaryColor }}
-						>
-							Afspraak maken
-						</button>
-						<button
-							className="btn-secondary"
-							style={{
-								color: textColor,
-								borderColor: buttonSecondaryBorder,
-								backgroundColor: 'transparent'
-							}}
-						>
-							Onze prijslijst
-						</button>
+						{primaryButton.text && (
+							<a
+								href={primaryButton.href}
+								className="btn-primary"
+								style={{
+									backgroundColor: primaryButton.backgroundColor || buttonPrimaryColor,
+									borderColor: primaryButton.backgroundColor || buttonPrimaryColor
+								}}
+							>
+								{primaryButton.text}
+							</a>
+						)}
+						{secondaryButton.text && (
+							<a
+								href={secondaryButton.href}
+								className="btn-secondary"
+								style={{
+									color: textColor,
+									borderColor: secondaryButton.borderColor || buttonSecondaryBorder,
+									backgroundColor: 'transparent'
+								}}
+							>
+								{secondaryButton.text}
+							</a>
+						)}
 					</div>
 				</div>
 

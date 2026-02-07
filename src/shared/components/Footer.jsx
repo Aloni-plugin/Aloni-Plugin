@@ -48,12 +48,13 @@ export const Footer = () => {
 					<div className="footer-cta-box">
 						<h3 className="footer-cta-heading">Kappersafspraak maken?</h3>
 						<div className="footer-cta-buttons">
-							<button className="footer-btn footer-btn-primary">
+							<a href="/reserveren" className="footer-btn footer-btn-primary">
 								Afspraak via de website
-							</button>
-							<button className="footer-btn footer-btn-secondary">
+							</a>
+							<a href="https://www.facebook.com/p/Kapsalon-Deniz-100082979419912/" target="_blank"
+							   rel="noopener noreferrer" className="footer-btn footer-btn-secondary">
 								Afspraak via Facebook
-							</button>
+							</a>
 						</div>
 					</div>
 				</div>
