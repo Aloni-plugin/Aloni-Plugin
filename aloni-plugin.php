@@ -130,3 +130,21 @@ function register_kapsalon_prices_block() {
 }
 add_action('init', 'register_kapsalon_prices_block');
 
+// Render function for the tailor prices page block
+function render_tailor_prices_block() {
+    ob_start();
+    ?>
+    <div data-tailor-prices="true"></div>
+    <?php
+    return ob_get_clean();
+}
+
+// Register the tailor prices block
+function register_tailor_prices_block() {
+    register_block_type('tailor/prices-page', array(
+        'render_callback' => 'render_tailor_prices_block',
+        'editor_script' => 'tailor-prices-editor',
+        'script' => 'tailor-prices-view'
+    ));
+}
+add_action('init', 'register_tailor_prices_block');
