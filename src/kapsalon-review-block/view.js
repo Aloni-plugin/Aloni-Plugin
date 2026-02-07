@@ -1,5 +1,6 @@
 import { createRoot } from '@wordpress/element';
 import { Navigation, ContactCards, HeroSection, Footer } from '../shared/components';
+import {SharedText} from "../shared/text/SharedText";
 
 document.addEventListener('DOMContentLoaded', () => {
 	const containers = document.querySelectorAll('[data-kapsalon-review="true"]');
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		root.render(
 			<>
 				<Navigation />
-				<HeroSection />
+				<HeroSection {...SharedText.hero.reviews} />
 				{/* React will render here, reviews are below as sibling */}
 			</>
 		);
