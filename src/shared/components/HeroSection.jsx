@@ -1,25 +1,54 @@
 import React from 'react';
 
-export const HeroSection = () => {
+export const HeroSection = ({
+								image,
+								heading,
+								primaryButton,
+								secondaryButton,
+								logo
+							}) => {
+	const ButtonWrapper = ({ href, children, ...props }) => {
+		if (href) {
+			return <a href={href} {...props}>{children}</a>;
+		}
+		return <button {...props}>{children}</button>;
+	};
+
 	return (
 		<div className="hero-container">
-			<img src="/wp-content/plugins/Aloni-Plugin/images/kapsalon-homepage.png" alt="" className="hero-background" />
+			<img src={image} alt="" className="hero-background" />
 
 			<div className="hero-content">
-				<h2 className="hero-heading">Klaar voor iets nieuws?</h2>
+				<h2 className="hero-heading">{heading}</h2>
 
 				<div className="hero-buttons">
-					<button className="btn-primary">
-						Afspraak maken
-					</button>
-					<button className="btn-secondary">
-						Onze prijslijst
-					</button>
+					<ButtonWrapper
+						href={primaryButton.href}
+						className="btn-primary"
+						style={{
+							backgroundColor: primaryButton.backgroundColor,
+							color: primaryButton.textColor,
+							borderColor: primaryButton.backgroundColor
+						}}
+					>
+						{primaryButton.text}
+					</ButtonWrapper>
+					<ButtonWrapper
+						href={secondaryButton.href}
+						className="btn-secondary"
+						style={{
+							backgroundColor: secondaryButton.backgroundColor,
+							color: secondaryButton.textColor,
+							borderColor: secondaryButton.borderColor
+						}}
+					>
+						{secondaryButton.text}
+					</ButtonWrapper>
 				</div>
 
 				<div className="hero-logo">
-					<span className="logo-kapsalon">Kapsalon</span>
-					<span className="logo-deniz">Deniz</span>
+					<span className="logo-kapsalon">{logo.topText}</span>
+					<span className="logo-deniz">{logo.bottomText}</span>
 				</div>
 			</div>
 		</div>

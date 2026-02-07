@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aloni-blocks/tailor-homepage-block",
+	"version": "0.1.0",
+	"title": "Tailor homepage",
+	"category": "widgets",
+	"icon": "images-alt2",
+	"description": "The complete tailor homepage",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "tailor-homepage",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

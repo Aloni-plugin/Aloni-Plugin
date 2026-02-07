@@ -3,16 +3,15 @@ import { Navigation, ContactCards, InformationWithPhotos, HeroSection, Footer } 
 import {SharedText} from "../shared/text/SharedText";
 
 document.addEventListener('DOMContentLoaded', () => {
-	const containers = document.querySelectorAll('[data-kapsalon-homepage="true"]');
+	const containers = document.querySelectorAll('[data-tailor-homepage="true"]');
 
 	containers.forEach(container => {
 		const root = createRoot(container);
 		root.render(
 			<>
 				<Navigation />
-				<HeroSection {...SharedText.hero.barber} />
-				<InformationWithPhotos {...SharedText.informationWithPhotos.barber.women} />
-				<InformationWithPhotos {...SharedText.informationWithPhotos.barber.men} />
+				<HeroSection {...SharedText.hero.tailor} />
+				<InformationWithPhotos />
 				<ContactCards />
 				<Footer	/>
 			</>
