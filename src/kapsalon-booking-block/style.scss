@@ -1,0 +1,30 @@
+@import "../shared/styles/shared-style";
+
+/* Ensure the booking wrapper doesn't crop content */
+.salon-booking-form-wrapper {
+	overflow: visible !important;
+	min-height: auto !important;
+	height: auto !important;
+	width: 100% !important;
+}
+
+/* Make sure the main booking container isn't restricted */
+#sln-salon,
+.sln-booking-form {
+	overflow: visible !important;
+	min-height: 600px !important;
+	height: auto !important;
+	max-width: 100% !important;
+}
+
+/* Fix if it's a parent container issue */
+.kapsalon-booking-wrapper {
+	overflow: visible !important;
+	height: auto !important;
+}
+
+/* Ensure React container doesn't crop siblings */
+[data-kapsalon-booking="true"] {
+	overflow: visible !important;
+	height: auto !important;
+}

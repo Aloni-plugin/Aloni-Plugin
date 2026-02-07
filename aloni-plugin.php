@@ -57,3 +57,26 @@ function create_block_aloni_plugin_block_init() {
 	}
 }
 add_action( 'init', 'create_block_aloni_plugin_block_init' );
+
+// Render function for your booking page block
+function render_kapsalon_booking_block() {
+    ob_start();
+    ?>
+    <div data-kapsalon-booking="true"></div>
+    <div class="salon-booking-section">
+        <?php echo do_shortcode('[salon/]'); ?>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+
+// Register the block
+function register_kapsalon_booking_block() {
+    register_block_type('kapsalon/booking-page', array(
+        'render_callback' => 'render_kapsalon_booking_block',
+        'editor_script' => 'kapsalon-booking-editor', // Your editor script handle
+        'script' => 'kapsalon-booking-view' // Your view.js script handle
+    ));
+}
+add_action('init', 'register_kapsalon_booking_block');
+
