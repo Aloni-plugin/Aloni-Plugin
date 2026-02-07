@@ -42,6 +42,7 @@ export const Navigation = () => {
 					<a href="/kleding-atelier" className="nav-link">Kleding atelier</a>
 					<a href="/producten" className="nav-link">Onze producten</a>
 					<a href="/over-ons" className="nav-link">Over ons</a>
+					<a href="/beoordelingen" className="nav-link">Beoordelingen</a>
 					<a href="/contact" className="nav-link">Contact</a>
 				</div>
 			</nav>
@@ -88,6 +89,7 @@ export const Navigation = () => {
 						<a href="/kleding-atelier" className="nav-link" onClick={closeMenu}>Kleding atelier</a>
 						<a href="/producten" className="nav-link" onClick={closeMenu}>Onze producten</a>
 						<a href="/over-ons" className="nav-link" onClick={closeMenu}>Over ons</a>
+						<a href="/beoordelingen" className="nav-link" onClick={closeMenu}>Beoordelingen</a>
 						<a href="/contact" className="nav-link" onClick={closeMenu}>Contact</a>
 					</div>
 				</nav>

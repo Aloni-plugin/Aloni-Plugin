@@ -1,0 +1,194 @@
+@import "../shared/styles/shared-style";
+
+/* Fix if it's a parent container issue */
+.kapsalon-review-wrapper {
+	overflow: visible !important;
+	height: auto !important;
+}
+
+/* Ensure React container doesn't crop siblings */
+[data-kapsalon-review="true"] {
+	overflow: visible !important;
+	height: auto !important;
+}
+
+/* Reviews section layout */
+.site-reviews-section {
+	overflow: visible !important;
+	min-height: auto !important;
+	height: auto !important;
+	width: 100% !important;
+	padding: 40px 60px;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+.site-reviews-columns {
+	display: flex;
+	gap: 60px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.site-reviews-form-column {
+	flex: 1;
+	min-width: 0;
+}
+
+.site-reviews-list-column {
+	flex: 1;
+	min-width: 0;
+}
+
+.site-reviews-heading {
+	font-family: 'Poppins', sans-serif;
+	font-size: 28px;
+	font-weight: 700;
+	margin: 0 0 24px 0;
+	color: #1a1a1a;
+}
+
+/* Style individual review items with cloud background */
+.glsr-review {
+	background: linear-gradient(to right, #3e4c3f 0%, #3e4c3f 100%) !important;
+	border-radius: 12px !important;
+	padding: 24px !important;
+	margin-bottom: 20px !important;
+	color: #fff !important;
+	position: relative !important;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Review title - bold */
+.glsr-review-title,
+.glsr-review .glsr-tag-value:first-of-type {
+	font-weight: 700 !important;
+	font-size: 20px !important;
+	margin: 0 0 12px 0 !important;
+	color: #fff !important;
+	font-family: 'Poppins', sans-serif !important;
+	display: block !important;
+}
+
+/* Stars and date container */
+.glsr-review-meta {
+	display: flex !important;
+	align-items: center !important;
+	gap: 12px !important;
+	margin-bottom: 16px !important;
+}
+
+/* Star rating */
+.glsr-review .glsr-star-rating {
+	font-size: 14px !important;
+	
+	i, svg, img, .glsr-star {
+		width: 14px !important;
+		height: 14px !important;
+	}
+}
+
+/* Review date - small font */
+.glsr-review-date {
+	font-size: 6px !important;
+	color: rgba(255, 255, 255, 0.8) !important;
+	font-weight: 400 !important;
+}
+
+/* Review text - normal weight, smaller font */
+.glsr-review-content,
+.glsr-review .glsr-tag-value:not(:first-of-type) {
+	font-weight: 400 !important;
+	font-size: 12px !important;
+	line-height: 1.6 !important;
+	margin-bottom: 16px !important;
+	color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Reviewer name - bottom right with dash */
+.glsr-review-author {
+	position: absolute !important;
+	bottom: 16px !important;
+	right: 20px !important;
+	font-size: 12px !important;
+	color: rgba(255, 255, 255, 0.7) !important;
+	font-weight: 400 !important;
+	margin-top: 2em !important;
+}
+
+.glsr-review-author::before {
+	content: "-" !important;
+	margin-right: 4px !important;
+}
+
+/* Make sure the Site Reviews plugin containers aren't restricted */
+.glsr-reviews,
+.glsr-default,
+.glsr-form {
+	overflow: visible !important;
+	min-height: auto !important;
+	height: auto !important;
+	max-width: 100% !important;
+}
+
+/* Make star ratings smaller */
+.glsr-star-rating,
+.glsr-star-rating--ltr {
+	font-size: 16px !important;
+	
+	i, svg, img, .glsr-star {
+		width: 16px !important;
+		height: 16px !important;
+	}
+}
+
+/* Make form inputs 20% smaller */
+.glsr-form {
+	input[type="text"],
+	input[type="email"],
+	textarea,
+	select {
+		padding: 0.5em 0.8em !important;
+		font-size: 0.85em !important;
+		min-height: auto !important;
+	}
+	
+	textarea {
+		min-height: 80px !important;
+	}
+}
+
+/* Style the submit review button */
+.glsr-form button[type="submit"],
+.glsr-button,
+.glsr-submit {
+	background: linear-gradient(to right, #f76061 0%, #f76061 100%) !important;
+	border: none !important;
+	color: #fff !important;
+	padding: 0.8em 1.5em !important;
+	border-radius: 4px !important;
+	font-weight: 600 !important;
+	cursor: pointer !important;
+	transition: opacity 0.2s ease !important;
+	
+	&:hover {
+		opacity: 0.9 !important;
+	}
+}
+
+/* Responsive: stack columns on mobile */
+@media (max-width: 768px) {
+	.site-reviews-section {
+		padding: 24px 20px;
+	}
+
+	.site-reviews-columns {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.site-reviews-heading {
+		font-size: 22px;
+		margin-bottom: 16px;
+	}
+}
