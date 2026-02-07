@@ -6,7 +6,8 @@ module.exports = {
     entry: {
         ...defaultConfig.entry(),
         'sticky-cards-block/view': './src/sticky-cards-block/view.js',
-		'kapsalon-block/view': './src/kapsalon-block/view.js'
+		'kapsalon-block/view': './src/kapsalon-block/view.js',
+		'kapsalon-prices-block/view': './src/kapsalon-prices-block/view.js'
     },
 	externals: {
 		...defaultConfig.externals,
