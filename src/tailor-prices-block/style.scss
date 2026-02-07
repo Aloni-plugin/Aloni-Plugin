@@ -1,0 +1,159 @@
+@import "../shared/styles/shared-style";
+
+/* =========================================================
+   Tailor Prijslijst Section
+   ========================================================= */
+
+[data-tailor-prices="true"] {
+	overflow: visible;
+	height: auto;
+}
+
+.tailor-prijslijst-section {
+	padding: 60px 60px 80px;
+	background: #ffffff;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+/* ---------------------------------------------------------
+   Category tabs – centered horizontally
+   --------------------------------------------------------- */
+.tailor-prijslijst-categories {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	margin-bottom: 120px;
+}
+
+.tailor-prijslijst-category-btn {
+	all: unset;
+	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+	font-size: 54px;
+	line-height: 100%;
+	letter-spacing: -0.05em;
+	color: #00000080;
+	transition: color 0.2s ease;
+	user-select: none;
+
+	&:hover {
+		color: #3D4D3E;
+	}
+
+	&--active {
+		color: #3D4D3E;
+	}
+}
+
+/* ---------------------------------------------------------
+   Subcategory 2-column grid
+   --------------------------------------------------------- */
+.tailor-prijslijst-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 80px;
+	row-gap: 60px;
+}
+
+/* ---------------------------------------------------------
+   Individual subcategory block
+   --------------------------------------------------------- */
+.tailor-prijslijst-subcategory-title {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+	font-size: 54px;
+	line-height: 100%;
+	letter-spacing: -0.07em;
+	color: #3D4D3E;
+	margin: 0 0 20px 0;
+}
+
+.tailor-prijslijst-services-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.tailor-prijslijst-service-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 8px 0;
+	border-bottom: 2px solid #3D4D3E;
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.tailor-prijslijst-service-name {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 100%;
+	letter-spacing: -0.07em;
+	color: #000000;
+}
+
+.tailor-prijslijst-service-price {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+	font-size: 32px;
+	line-height: 100%;
+	letter-spacing: -0.07em;
+	color: #000000;
+	white-space: nowrap;
+	margin-left: 24px;
+}
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+@media (max-width: 1024px) {
+	.tailor-prijslijst-grid {
+		grid-template-columns: 1fr;
+		row-gap: 48px;
+	}
+
+	.tailor-prijslijst-category-btn {
+		font-size: 36px;
+	}
+
+	.tailor-prijslijst-subcategory-title {
+		font-size: 36px;
+	}
+
+	.tailor-prijslijst-service-name,
+	.tailor-prijslijst-service-price {
+		font-size: 24px;
+	}
+
+	.tailor-prijslijst-section {
+		padding: 48px 24px;
+	}
+}
+
+@media (max-width: 600px) {
+	.tailor-prijslijst-categories {
+		gap: 24px;
+	}
+
+	.tailor-prijslijst-category-btn {
+		font-size: 28px;
+	}
+
+	.tailor-prijslijst-subcategory-title {
+		font-size: 28px;
+	}
+
+	.tailor-prijslijst-service-name,
+	.tailor-prijslijst-service-price {
+		font-size: 18px;
+	}
+
+	.tailor-prijslijst-section {
+		padding: 32px 16px;
+	}
+}
