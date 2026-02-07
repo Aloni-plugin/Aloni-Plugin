@@ -89,7 +89,7 @@ export const DiagonalCutSection = ({
 
 						<button
 							className="CTAButton is-primary"
-							onClick={onButtonClick || (() => window.location.href = '/contact')}
+							onClick={onButtonClick || (() => window.location.href = '/reserveren')}
 						>
 							Kapper afspraak
 						</button>

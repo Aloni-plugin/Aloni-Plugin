@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aloni-blocks/kapsalon-reservation-approved-block",
+	"version": "0.1.0",
+	"title": "Thanks reservation page",
+	"category": "widgets",
+	"icon": "images-alt2",
+	"description": "thanks for your reservation page",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "reservation-approved",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

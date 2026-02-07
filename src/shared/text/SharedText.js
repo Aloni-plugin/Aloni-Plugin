@@ -5,6 +5,56 @@ export const SharedText = {
 			heading: "Klaar voor iets nieuws?",
 			primaryButton: {
 				text: "Afspraak maken",
+				href: "/reserveren",
+				backgroundColor: "#F86060",
+				textColor: "#ffffff"
+			},
+			secondaryButton: {
+				text: "Onze prijslijst",
+				href: "/kapper-prijslijst",
+				backgroundColor: "transparent",
+				textColor: "#ffffff",
+				borderColor: "#ffffff"
+			},
+			logo: {
+				topText: "Kapsalon",
+				bottomText: "Deniz"
+			}
+		},
+		reservation: {
+			image: "/wp-content/plugins/Aloni-Plugin/images/kapsalon-homepage.png",
+			heading: "Klaar voor iets nieuws?",
+			logo: {
+				topText: "Kapsalon",
+				bottomText: "Deniz"
+			}
+		},
+		tailor: {
+			image: "/wp-content/plugins/Aloni-Plugin/images/kleding-reperatie-hero.png",
+			heading: "Klaar voor iets nieuws?",
+			primaryButton: {
+				text: "Neem contact op",
+				href: "/contact",
+				backgroundColor: "#F86060",
+				textColor: "#ffffff"
+			},
+			secondaryButton: {
+				text: "Onze prijslijst",
+				href: "/atelier-prijslijst",
+				backgroundColor: "transparent",
+				textColor: "#ffffff",
+				borderColor: "#ffffff"
+			},
+			logo: {
+				topText: "Atelier",
+				bottomText: "Deniz"
+			}
+		},
+		reviews: {
+			image: "/wp-content/plugins/Aloni-Plugin/images/kapsalon-homepage.png",
+			heading: "Wat onze klanten zeggen",
+			primaryButton: {
+				text: "Afspraak maken",
 				href: "/afspraak",
 				backgroundColor: "#F86060",
 				textColor: "#ffffff"
@@ -100,6 +150,42 @@ export const SharedText = {
 					"/wp-content/plugins/Aloni-plugin/images/barber-information-3.png",
 				]
 			}
+		},
+		tailor: {
+			titleItalic: "Deniz voor al jouw",
+			title: "kledingreperaties",
+			paragraphs: [
+				"Met de drukke wereld waarin we leven, heb je misschien niet altijd de tijd om aanpassingen voor jezelf, je familie of je huis te doen. Wij zijn gespecialiseerd in het maken en herstellen van kleding, gordijnen, banken, hoezen, maar bijvoorbeeld ook scooterzadels en autobekleding.",
+				"Onze ervaren medewerkers weten hoe ze het materiaal moeten repareren en alles er als nieuw uit kunnen laten zien."
+			],
+			backgroundColor: "#4A5D52",
+			textColor: "#ffffff",
+			buttonPrimaryColor: "#ffffff",
+			buttonSecondaryBorder: "#ffffff",
+			photos: [
+				"/wp-content/plugins/Aloni-plugin/images/tailor-information-1.png",
+				"/wp-content/plugins/Aloni-plugin/images/tailor-information-2.png",
+				"/wp-content/plugins/Aloni-plugin/images/tailor-information-3.png",
+			]
+		}
+	},
+	shortPriceList: {
+		title: "Onze prijslijst",
+		priceItems: [
+			{ name: "Colbert korter/langer maken", price: "€20,-" },
+			{ name: "Blouse of Overhemd korter of langer maken", price: "€8,-" },
+			{ name: "Nieuwe rits voor pantalon of jeans", price: "€25,50" },
+			{ name: "Knopen aanzetten", price: "€4,-" }
+		],
+		ctaText: "Wat nog meer?",
+		backgroundColor: "#3D4D3E",
+		primaryButton: {
+			text: "Neem contact op",
+			href: "/contact"
+		},
+		secondaryButton: {
+			text: "Volledige prijslijst",
+			href: "/atelier-prijslijst"
 		}
 	}
 }
