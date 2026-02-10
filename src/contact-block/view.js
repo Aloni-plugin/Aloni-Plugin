@@ -1,6 +1,6 @@
 import { createRoot } from '@wordpress/element';
-import { Navigation, ContactCards, InformationWithPhotos, HeroSection, Footer } from '../shared/components';
-import {SharedText} from "../shared/text/SharedText";
+import { Navigation, ContactCards, HeroSection, Footer } from '../shared/components';
+import { SharedText } from '../shared/text/SharedText';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const containers = document.querySelectorAll('[data-contact-page="true"]');
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		root.render(
 			<>
 				<Navigation />
+				<HeroSection {...SharedText.hero.contact} useDesignLayout />
 				<ContactCards />
 				<Footer	/>
 			</>

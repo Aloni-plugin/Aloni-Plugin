@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 export const StickyCardsSection = () => {
 	const stickyRef = useRef(null);
 	const cardContainerRef = useRef(null);
-	const stickyHeaderRef = useRef(null);
 	const card1Ref = useRef(null);
 	const card2Ref = useRef(null);
 	const card3Ref = useRef(null);
@@ -112,18 +111,6 @@ export const StickyCardsSection = () => {
 					onUpdate: (self) => {
 						const progress = self.progress;
 
-						// Update header (0.1 - 0.35)
-						if (progress >= 0.1 && progress <= 0.35) {
-							const headerProgress = gsap.utils.mapRange(0.1, 0.35, 0, 1, progress);
-							const yValue = gsap.utils.mapRange(0, 1, 40, 0, headerProgress);
-							const opacityValue = gsap.utils.mapRange(0, 1, 0, 1, headerProgress);
-							gsap.set(stickyHeaderRef.current, { y: yValue, opacity: opacityValue });
-						} else if (progress < 0.1) {
-							gsap.set(stickyHeaderRef.current, { y: 40, opacity: 0 });
-						} else {
-							gsap.set(stickyHeaderRef.current, { y: 0, opacity: 1 });
-						}
-
 						// Update card width (0 - 0.35)
 						if (progress <= 0.35) {
 							const widthPercentage = gsap.utils.mapRange(0, 0.35, 75, 60, progress);
@@ -164,10 +151,6 @@ export const StickyCardsSection = () => {
 
 	return (
 		<section className="sticky" ref={stickyRef} style={{ background: 'transparent' }}>
-			<div className="sticky-header">
-				<h1 ref={stickyHeaderRef}>Three pillars with one purpose</h1>
-			</div>
-
 			<div className="card-container" ref={cardContainerRef}>
 				<div className="card" id="card-1" ref={card1Ref}>
 					<div className="card-front">
@@ -177,8 +160,10 @@ export const StickyCardsSection = () => {
 						<img src="/wp-content/plugins/Aloni-Plugin/images/card-back-1.png" alt="Card 1 back"/>
 						<div className="card-overlay">
 							<div className="card-content">
-								<h2 className="card-title">Kapsalon</h2>
-								<p className="card-subtitle">deniz</p>
+								<div className="card-heading">
+									<h2 className="card-title">Kapsalon</h2>
+									<p className="card-subtitle">deniz</p>
+								</div>
 								<div className="card-buttons">
 									<a href="/kapsalon" className="card-btn card-btn-primary">
 										<span className="btn-icon">🏠</span>
@@ -202,8 +187,10 @@ export const StickyCardsSection = () => {
 						<img src="/wp-content/plugins/Aloni-Plugin/images/card-back-2.png" alt="Card 2 back"/>
 						<div className="card-overlay">
 							<div className="card-content">
-								<h2 className="card-title">Atelier</h2>
-								<p className="card-subtitle">deniz</p>
+								<div className="card-heading">
+									<h2 className="card-title">Atelier</h2>
+									<p className="card-subtitle">deniz</p>
+								</div>
 								<div className="card-buttons">
 									<a href="/atelier" className="card-btn card-btn-primary">
 										<span className="btn-icon">🏠</span>
@@ -227,8 +214,10 @@ export const StickyCardsSection = () => {
 						<img src="/wp-content/plugins/Aloni-Plugin/images/card-back-3.png" alt="Card 3 back"/>
 						<div className="card-overlay">
 							<div className="card-content">
-								<h2 className="card-title">Onze</h2>
-								<p className="card-subtitle">Producten</p>
+								<div className="card-heading">
+									<h2 className="card-title">Onze</h2>
+									<p className="card-subtitle">Producten</p>
+								</div>
 								<div className="card-buttons">
 									<div className="button-wrapper">
 										<button className="card-btn card-btn-primary" disabled>

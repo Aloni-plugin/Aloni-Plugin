@@ -14,3 +14,9 @@ img {
 	height: 100%;
 	object-fit: fill;
 }
+
+/* Remove underline from all buttons site-wide */
+button,
+a[class*="btn"] {
+	text-decoration: none;
+}

@@ -4,12 +4,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: visible;
 }
 
 .info-photos-container {
 	position: relative;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1320px;
 	border-radius: 30px;
 	padding: 3.5rem 6rem 0;
 	display: flex;
@@ -17,6 +18,7 @@
 	align-items: center;
 	justify-content: flex-start;
 	overflow: visible;
+	padding-bottom: 0;
 }
 
 .info-photos-content {
@@ -35,7 +37,17 @@
 }
 
 .heading-italic {
+	font-family: 'Licorice', cursive;
+	font-size: 72px;
 	font-style: italic;
+}
+
+.heading-bold {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 800;
+	font-size: 52px;
+	letter-spacing: -0.07em;
+	margin-left: 0.35em;
 }
 
 .info-photos-text {
@@ -47,6 +59,10 @@
 }
 
 .info-photos-text p {
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: normal;
 	margin-bottom: 1rem;
 }
 
@@ -58,30 +74,37 @@
 	margin-bottom: 2.5rem;
 }
 
-.btn-primary,
-.btn-secondary {
+// Scoped to InformationWithPhotos only so hero buttons keep their styles
+.info-photos-section .btn-primary,
+.info-photos-section .btn-secondary {
 	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+	font-weight: 400;
+	font-size: 20px;
 	padding: 0.75rem 2rem;
-	border-radius: 4px;
+	border-radius: 16px;
 	border: 2px solid;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	min-width: 180px;
 }
 
-.btn-primary {
-	color: #ffffff;
+.info-photos-section .btn-primary {
+	font-weight: 300;
+	color: rgba(255, 255, 255, 1);
+	/* Background and border come from component inline styles (contrast with section background) */
 }
 
-.btn-primary:hover {
+.info-photos-section .btn-primary:hover {
 	opacity: 0.9;
 }
 
-.btn-secondary:hover {
+.info-photos-section .btn-secondary:hover {
 	background-color: #ffffff !important;
 	color: #F86060 !important;
+}
+
+[data-tailor-homepage="true"] .info-photos-section .btn-secondary:hover {
+	color: var(--color-tailor-primary) !important;
 }
 
 .info-photos-images {
@@ -89,13 +112,14 @@
 	gap: 1.5rem;
 	align-items: flex-end;
 	justify-content: center;
-	margin-top: -1rem;
+	margin-top: 0;
+	margin-bottom: -2rem; /* allow frames to overflow below the section */
 	position: relative;
 	z-index: 2;
 }
 
 .framed-photo {
-	width: 240px;
+	width: 300px;
 	height: auto;
 	object-fit: contain;
 }
@@ -103,23 +127,23 @@
 /* Responsive design */
 @media (max-width: 1100px) {
 	.info-photos-container {
-		max-width: 1000px;
+		max-width: 1100px;
 		padding: 3rem 5rem 0;
 	}
 
 	.framed-photo {
-		width: 200px;
+		width: 260px;
 	}
 }
 
 @media (max-width: 900px) {
 	.info-photos-container {
-		max-width: 850px;
+		max-width: 930px;
 		padding: 3rem 4rem 0;
 	}
 
 	.framed-photo {
-		width: 180px;
+		width: 220px;
 	}
 
 	.info-photos-images {
@@ -142,6 +166,22 @@
 
 	.info-photos-heading {
 		margin-bottom: 1.25rem;
+		font-size: clamp(1.25rem, 4vw, 1.5rem);
+	}
+
+	.heading-italic {
+		font-size: 48px;
+	}
+
+	.heading-bold {
+		font-size: 36px;
+		margin-left: 0.25em;
+	}
+
+	.info-photos-text,
+	.info-photos-text p {
+		font-size: 18px;
+		line-height: 1.5;
 	}
 
 	.info-photos-text {
@@ -154,17 +194,19 @@
 		margin-bottom: 2rem;
 	}
 
-	.btn-primary,
-	.btn-secondary {
+	.info-photos-section .btn-primary,
+	.info-photos-section .btn-secondary {
 		min-width: 160px;
+		font-size: 18px;
 	}
 
 	.info-photos-images {
 		gap: 0.75rem;
+		margin-bottom: -1.5rem;
 	}
 
 	.framed-photo {
-		width: 140px;
+		width: 160px;
 	}
 }
 
@@ -177,8 +219,33 @@
 		padding: 2rem 1.5rem 0;
 	}
 
+	.info-photos-heading {
+		font-size: clamp(1.125rem, 4.5vw, 1.35rem);
+	}
+
+	.heading-italic {
+		font-size: 36px;
+	}
+
+	.heading-bold {
+		font-size: 26px;
+		margin-left: 0.2em;
+	}
+
+	.info-photos-text,
+	.info-photos-text p {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
 	.info-photos-text p {
 		margin-bottom: 0.85rem;
+	}
+
+	.info-photos-section .btn-primary,
+	.info-photos-section .btn-secondary {
+		font-size: 16px;
+		padding: 0.65rem 1.5rem;
 	}
 
 	.info-photos-buttons {
@@ -187,9 +254,10 @@
 
 	.info-photos-images {
 		gap: 0.5rem;
+		margin-bottom: -1rem;
 	}
 
 	.framed-photo {
-		width: 110px;
+		width: 120px;
 	}
 }

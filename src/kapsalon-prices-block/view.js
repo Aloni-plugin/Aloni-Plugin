@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		root.render(
 			<>
 				<Navigation />
-				<HeroSection {...SharedText.hero.barber} />
+				<HeroSection {...SharedText.hero.barber} useDesignLayout />
 				<PriceList />
 				<ContactCards />
 				<Footer />

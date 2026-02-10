@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		root.render(
 			<>
 				<Navigation />
-				<HeroSection {...SharedText.hero.reservation} />
+				<HeroSection {...SharedText.hero.reservation} useDesignLayout />
 				{/* React will render here, booking form is below as sibling */}
 			</>
 		);
 
 		// Move the booking form between HeroSection and ContactCards
-		const heroSection = container.querySelector('.hero-section'); // adjust selector
+		const heroSection = container.querySelector('.hero-container');
 		if (heroSection && bookingFormWrapper) {
 			heroSection.after(bookingFormWrapper);
 		}

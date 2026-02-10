@@ -62,7 +62,7 @@
 /* Review title - bold */
 .glsr-review-title,
 .glsr-review .glsr-tag-value:first-of-type {
-	font-weight: 700 !important;
+	font-weight: 500 !important;
 	font-size: 20px !important;
 	margin: 0 0 12px 0 !important;
 	color: #fff !important;
@@ -95,11 +95,13 @@
 	font-weight: 400 !important;
 }
 
-/* Review text - normal weight, smaller font */
+/* Review text - normal weight */
 .glsr-review-content,
-.glsr-review .glsr-tag-value:not(:first-of-type) {
+.glsr-review .glsr-tag-value:not(:first-of-type),
+.glsr-review .glsr-review-content p,
+.glsr-review .glsr-tag-value p {
 	font-weight: 400 !important;
-	font-size: 12px !important;
+	font-size: 20px !important;
 	line-height: 1.6 !important;
 	margin-bottom: 16px !important;
 	color: rgba(255, 255, 255, 0.9) !important;
@@ -166,7 +168,7 @@
 	border: none !important;
 	color: #fff !important;
 	padding: 0.8em 1.5em !important;
-	border-radius: 4px !important;
+	border-radius: 16px !important;
 	font-weight: 600 !important;
 	cursor: pointer !important;
 	transition: opacity 0.2s ease !important;

@@ -11,28 +11,34 @@ export const ShortPriceList = ({
 
 	return (
 		<section className="short-price-list-section">
-			<svg className="price-list-background" viewBox="0 0 1377 766" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-				<path d="M1297 0C1341.18 0 1377 35.8172 1377 80V685.527C1377 729.71 1341.18 765.527 1297 765.527H768C723.817 765.527 688 729.71 688 685.527V631.864H80C35.8172 631.864 0 596.047 0 551.864V80C0 35.8172 35.8172 0 80 0H1297Z" fill={backgroundColor}/>
-			</svg>
+			<div className="short-price-list-inner">
+				<svg className="price-list-background" viewBox="0 0 1377 766" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+					<path d="M1297 0C1341.18 0 1377 35.8172 1377 80V685.528C1377 729.711 1341.18 765.528 1297 765.528H768C723.817 765.528 688 729.711 688 685.528V631.864H80C35.8172 631.864 0 596.047 0 551.864V80C0 35.8172 35.8172 0 80 0H1297Z" fill={backgroundColor}/>
+				</svg>
 
-			<div className="price-list-content">
-				<div className="price-list-left">
-					<h2 className="price-list-title">{title}</h2>
+				<img
+					className="price-list-book"
+					src="/wp-content/plugins/Aloni-Plugin/images/book.png"
+					alt=""
+					loading="lazy"
+				/>
 
-					<div className="price-items">
-						{priceItems.map((item, index) => (
-							<div key={index} className="price-item">
-								<span className="item-name">{item.name}</span>
-								<span className="item-price">{item.price}</span>
-							</div>
-						))}
+				<div className="price-list-content">
+					<div className="price-list-top">
+						<h2 className="price-list-title">{title}</h2>
+						<div className="price-items">
+							{priceItems.map((item, index) => (
+								<div key={index} className="price-item">
+									<span className="item-name">{item.name}</span>
+									<span className="item-price">{item.price}</span>
+								</div>
+							))}
+						</div>
 					</div>
-				</div>
 
-				<div className="price-list-right">
-					<p className="price-list-cta-text">{ctaText}</p>
-
-					<div className="price-list-buttons">
+					<div className="price-list-bottom">
+						<p className="price-list-cta-text">{ctaText}</p>
+						<div className="price-list-buttons">
 						{primaryButton && (
 							<a href={primaryButton.href} className="price-btn price-btn-primary">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -50,6 +56,7 @@ export const ShortPriceList = ({
 								{secondaryButton.text}
 							</a>
 						)}
+						</div>
 					</div>
 				</div>
 			</div>

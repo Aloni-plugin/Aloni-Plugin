@@ -6,15 +6,17 @@ export const SharedText = {
 			primaryButton: {
 				text: "Afspraak maken",
 				href: "/reserveren",
-				backgroundColor: "#F86060",
-				textColor: "#ffffff"
+				backgroundColor: "#F26B6B",
+				textColor: "#ffffff",
+				icon: "📅"
 			},
 			secondaryButton: {
 				text: "Onze prijslijst",
 				href: "/kapper-prijslijst",
-				backgroundColor: "transparent",
-				textColor: "#ffffff",
-				borderColor: "#ffffff"
+				backgroundColor: "#ffffff",
+				textColor: "#F26B6B",
+				borderColor: "#F26B6B",
+				icon: "📋"
 			},
 			logo: {
 				topText: "Kapsalon",
@@ -35,18 +37,41 @@ export const SharedText = {
 			primaryButton: {
 				text: "Neem contact op",
 				href: "/contact",
-				backgroundColor: "#F86060",
+				backgroundColor: "#3D4D3E",
 				textColor: "#ffffff"
 			},
 			secondaryButton: {
 				text: "Onze prijslijst",
 				href: "/atelier-prijslijst",
 				backgroundColor: "transparent",
-				textColor: "#ffffff",
-				borderColor: "#ffffff"
+				textColor: "#3D4D3E",
+				borderColor: "#3D4D3E"
 			},
 			logo: {
 				topText: "Atelier",
+				bottomText: "Deniz"
+			}
+		},
+		contact: {
+			image: "/wp-content/plugins/Aloni-Plugin/images/kapsalon-homepage.png",
+			heading: "Neem contact op",
+			primaryButton: {
+				text: "Afspraak maken",
+				href: "/reserveren",
+				backgroundColor: "#F26B6B",
+				textColor: "#ffffff",
+				icon: "📅"
+			},
+			secondaryButton: {
+				text: "Onze prijslijst",
+				href: "/kapper-prijslijst",
+				backgroundColor: "#ffffff",
+				textColor: "#F26B6B",
+				borderColor: "#F26B6B",
+				icon: "📋"
+			},
+			logo: {
+				topText: "Kapsalon",
 				bottomText: "Deniz"
 			}
 		},
@@ -85,8 +110,7 @@ export const SharedText = {
 				textColor: "#ffffff",
 				primaryButton: {
 					text: "Afspraak maken",
-					href: "/reserveren",
-					backgroundColor: "#4A5D52"
+					href: "/reserveren"
 				},
 				secondaryButton: {
 					text: "Onze prijslijst",
@@ -110,8 +134,7 @@ export const SharedText = {
 				textColor: "#ffffff",
 				primaryButton: {
 					text: "Afspraak maken",
-					href: "/reserveren",
-					backgroundColor: "#4A5D52"
+					href: "/reserveren"
 				},
 				secondaryButton: {
 					text: "Onze prijslijst",
@@ -137,7 +160,7 @@ export const SharedText = {
 			primaryButton: {
 				text: "Neem contact op",
 				href: "/contact",
-				backgroundColor: "#ffffff"
+				backgroundColor: "#F86060"
 			},
 			secondaryButton: {
 				text: "Onze prijslijst",

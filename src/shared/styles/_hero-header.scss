@@ -17,6 +17,117 @@
 	z-index: 0;
 }
 
+// Design layout: inner box contains image with rounded corners; 80px margin around it
+.hero-container.hero-design-layout {
+	justify-content: center;
+	align-items: center;
+	padding: 80px;
+}
+
+.hero-design-layout .hero-inner {
+	position: relative;
+	width: 100%;
+	max-width: 1536px;
+	height: 800px;
+	min-height: 800px;
+	border-radius: 24px;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.hero-design-layout .hero-inner .hero-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+.hero-design-layout .hero-content {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: left;
+	max-width: none;
+	width: 100%;
+	height: 100%;
+	min-height: 0;
+	padding: 0;
+}
+
+.hero-design-layout .hero-cta {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	min-height: 0;
+	padding-top: 160px;
+	padding-left: 160px;
+}
+
+.hero-design-layout .hero-heading {
+	margin-bottom: 1.5rem;
+	font-weight: 500;
+	font-size: 44px;
+}
+
+.hero-design-layout .hero-buttons {
+	align-items: flex-start;
+	gap: 1rem;
+}
+
+.hero-design-layout .btn-primary,
+.hero-design-layout .btn-secondary {
+	min-width: 0;
+	width: auto;
+	padding: 0.75rem 1.5rem;
+	border-radius: 12px;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.hero-design-layout .hero-btn-icon {
+	font-size: 1.1em;
+}
+
+.hero-design-layout .hero-logo {
+	margin-top: auto;
+	padding-bottom: 2.5rem;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	line-height: 0;
+	text-align: center;
+}
+
+.hero-design-layout .logo-kapsalon {
+	font-family: 'Licorice', cursive;
+	font-size: 72px;
+	font-weight: 400;
+	color: rgba(248, 96, 96, 1);
+	line-height: 0.9;
+	margin-bottom: -0.15em;
+}
+
+.hero-design-layout .logo-deniz {
+	font-family: 'Poppins', sans-serif;
+	font-size: 112px;
+	font-weight: 900;
+	letter-spacing: -7px;
+	color: #F26B6B;
+	line-height: 0.9;
+	margin-left: 0;
+}
+
 .hero-content {
 	position: relative;
 	z-index: 1;
@@ -44,13 +155,18 @@
 .btn-secondary {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 20px;
+	letter-spacing: 0px;
 	padding: 12px 40px;
 	border-radius: 4px;
 	border: 2px solid #F86060;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	min-width: 200px;
+}
+
+.hero-btn-icon {
+	display: inline-block;
 }
 
 .btn-primary {
@@ -80,6 +196,45 @@
 		min-height: 600px;
 	}
 
+	.hero-container.hero-design-layout {
+		padding: 60px;
+	}
+
+	.hero-design-layout .hero-inner {
+		height: 600px;
+		min-height: 600px;
+	}
+
+	// Center tagline and buttons on mobile
+	.hero-design-layout .hero-cta {
+		align-items: center;
+		text-align: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.hero-design-layout .hero-heading {
+		text-align: center;
+	}
+
+	.hero-design-layout .hero-buttons {
+		align-items: center;
+	}
+
+	.hero-design-layout .hero-logo {
+		padding-bottom: 1.5rem;
+	}
+
+	// Smaller Kapsalon Deniz logo text on mobile
+	.hero-design-layout .logo-kapsalon {
+		font-size: 48px;
+	}
+
+	.hero-design-layout .logo-deniz {
+		font-size: 72px;
+		letter-spacing: -4px;
+	}
+
 	.hero-heading {
 		font-size: 24px;
 		margin-bottom: 20px;
@@ -87,8 +242,34 @@
 
 	.btn-primary,
 	.btn-secondary {
-		font-size: 14px;
+		font-size: 20px;
+		letter-spacing: 0px;
 		padding: 10px 30px;
 		min-width: 180px;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-container.hero-design-layout {
+		padding: 40px 24px;
+	}
+
+	.hero-design-layout .hero-inner {
+		height: 500px;
+		min-height: 500px;
+	}
+
+	.hero-design-layout .hero-logo {
+		padding-bottom: 1.25rem;
+	}
+
+	// Even smaller logo on very small screens
+	.hero-design-layout .logo-kapsalon {
+		font-size: 40px;
+	}
+
+	.hero-design-layout .logo-deniz {
+		font-size: 56px;
+		letter-spacing: -3px;
 	}
 }

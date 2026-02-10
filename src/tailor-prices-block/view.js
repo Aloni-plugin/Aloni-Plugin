@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		root.render(
 			<>
 				<Navigation />
-				<HeroSection {...SharedText.hero.tailor} />
+				<HeroSection {...SharedText.hero.tailor} useDesignLayout />
 				<TailorPriceList />
 				<ContactCards />
 				<Footer />

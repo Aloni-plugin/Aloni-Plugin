@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		root.render(
 			<>
 				<Navigation />
-				<HeroSection {...SharedText.hero.reviews} />
+				<HeroSection {...SharedText.hero.reviews} useDesignLayout />
 				{/* React will render here, reviews are below as sibling */}
 			</>
 		);
 
 		// Move the reviews between HeroSection and ContactCards
-		const heroSection = container.querySelector('.hero-section'); // adjust selector
+		const heroSection = container.querySelector('.hero-container');
 		if (heroSection && reviewsWrapper) {
 			heroSection.after(reviewsWrapper);
 		}
