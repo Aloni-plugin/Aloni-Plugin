@@ -38,6 +38,7 @@ export const Navigation = () => {
 				<div className="liquidGlass-tint"></div>
 				<div className="liquidGlass-shine"></div>
 				<div className="liquidGlass-text">
+					<a href="/" className="nav-link nav-link-homepage">Deniz</a>
 					<a href="/kapsalon" className="nav-link">Kapsalon</a>
 					<a href="/atelier" className="nav-link">Kleding atelier</a>
 					{/*<a href="/producten" className="nav-link">Onze producten</a>*/}
@@ -85,7 +86,8 @@ export const Navigation = () => {
 					</button>
 
 					<div className="liquidGlass-text mobile-nav-links">
-						<a href="/" className="nav-link" onClick={closeMenu}>Kapsalon</a>
+						<a href="/" className="nav-link nav-link-homepage" onClick={closeMenu}>Deniz</a>
+						<a href="/kapsalon" className="nav-link" onClick={closeMenu}>Kapsalon</a>
 						<a href="/kleding-atelier" className="nav-link" onClick={closeMenu}>Kleding atelier</a>
 						<a href="/producten" className="nav-link" onClick={closeMenu}>Onze producten</a>
 						<a href="/over-ons" className="nav-link" onClick={closeMenu}>Over ons</a>

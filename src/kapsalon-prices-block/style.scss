@@ -17,6 +17,8 @@
 .prijslijst-section {
 	padding: 80px 60px;
 	background: #ffffff;
+	position: relative;
+	overflow: visible;
 }
 
 .prijslijst-container {
@@ -25,17 +27,46 @@
 	max-width: 1440px;
 	margin: 0 auto;
 	align-items: flex-start;
+	position: relative;
 }
 
 /* ---------------------------------------------------------
-   Left sidebar – category buttons
+   Left column wrapper – fixed width so content never jumps
    --------------------------------------------------------- */
+.prijslijst-categories-wrap {
+	flex-shrink: 0;
+	min-width: 160px;
+}
+
+/* Left sidebar – category buttons (sticky within section) */
 .prijslijst-categories {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
-	flex-shrink: 0;
-	min-width: 160px;
+	position: sticky;
+	top: 50%;
+	transform: translateY(-50%);
+	align-self: flex-start;
+}
+
+/* JS fallback when sticky is broken – nav fixed and centered in viewport */
+.prijslijst-categories.is-stuck {
+	position: fixed !important;
+	/* top + transform set inline so nav stays vertically centered */
+}
+
+/* Above or past section – nav hidden so it only shows inside the pricelist */
+.prijslijst-categories.is-above,
+.prijslijst-categories.is-stuck-bottom {
+	visibility: hidden;
+}
+
+.prijslijst-categories.is-stuck-bottom {
+	position: absolute !important;
+	top: auto;
+	bottom: 0;
+	left: 0;
+	transform: none;
 }
 
 .prijslijst-category-btn {
@@ -49,6 +80,7 @@
 	color: #000000;
 	transition: color 0.2s ease;
 	user-select: none;
+	outline: none; /* only --active should show highlight, not focus */
 
 	&:hover {
 		color: #F86060;
@@ -60,12 +92,21 @@
 }
 
 /* ---------------------------------------------------------
-   Right side – services list
+   Right side – all category lists stacked (full list, page scrolls)
    --------------------------------------------------------- */
-.prijslijst-services {
+.prijslijst-content {
 	flex: 1;
 	max-width: 1060px;
 	margin-top: 80px;
+}
+
+.prijslijst-category-section {
+	scroll-margin-top: 24px;
+	margin-bottom: 104px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .prijslijst-services-title {
@@ -116,34 +157,83 @@
    Responsive
    --------------------------------------------------------- */
 @media (max-width: 1024px) {
+	.kapsalon-prices-wrapper,
+	[data-kapsalon-prices="true"] {
+		width: 100%;
+	}
+
+	.prijslijst-section {
+		padding: 48px 24px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
 	.prijslijst-container {
 		flex-direction: column;
 		gap: 40px;
+		width: 100%;
+		max-width: none;
 	}
 
 	.prijslijst-categories {
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: 12px 24px;
+		justify-content: center;
+		gap: 12px 16px;
 		min-width: unset;
+		position: relative;
+		top: auto;
+		transform: none;
+	}
+
+	/* No sticky on mobile – nav stays in flow */
+	.prijslijst-categories.is-stuck,
+	.prijslijst-categories.is-stuck-bottom,
+	.prijslijst-categories.is-above {
+		position: relative !important;
+		top: auto !important;
+		left: auto !important;
+		bottom: auto;
+		transform: none !important;
+		visibility: visible;
+	}
+
+	.prijslijst-categories-wrap {
+		min-width: unset;
+	}
+
+	.prijslijst-content {
+		margin-top: 24px;
+		width: 100%;
+		max-width: none;
 	}
 
 	.prijslijst-category-btn {
 		font-size: 32px;
+		color: #000000;
+
+		&:hover,
+		&--active {
+			color: #000000;
+		}
+	}
+
+	.prijslijst-category-section {
+		margin-bottom: 72px;
 	}
 
 	.prijslijst-services-title {
 		font-size: 36px;
-	}
-
-	.prijslijst-section {
-		padding: 48px 24px;
 	}
 }
 
 @media (max-width: 600px) {
 	.prijslijst-category-btn {
 		font-size: 24px;
+	}
+
+	.prijslijst-category-section {
+		margin-bottom: 56px;
 	}
 
 	.prijslijst-services-title {

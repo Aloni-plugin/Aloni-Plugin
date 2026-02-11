@@ -87,7 +87,7 @@
 	min-width: 0;
 	width: auto;
 	padding: 0.75rem 1.5rem;
-	border-radius: 12px;
+	border-radius: 16px;
 	display: inline-flex;
 	align-items: center;
 	gap: 0.5rem;
@@ -155,10 +155,10 @@
 .btn-secondary {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 500;
-	font-size: 20px;
+	font-size: 1rem;
 	letter-spacing: 0px;
-	padding: 12px 40px;
-	border-radius: 4px;
+	padding: 0.75rem 1.5rem;
+	border-radius: 16px;
 	border: 2px solid #F86060;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -242,9 +242,9 @@
 
 	.btn-primary,
 	.btn-secondary {
-		font-size: 20px;
+		font-size: 1rem;
 		letter-spacing: 0px;
-		padding: 10px 30px;
+		padding: 0.75rem 1.5rem;
 		min-width: 180px;
 	}
 }

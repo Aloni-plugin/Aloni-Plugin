@@ -102,7 +102,7 @@ export const StickyCardsSection = () => {
 				ScrollTrigger.create({
 					trigger: stickyRef.current,
 					start: 'top top',
-					end: `+=${window.innerHeight * 4}`,
+					end: `+=${window.innerHeight * 2}`,
 					scrub: 0.5,
 					pin: true,
 					pinSpacing: true,
@@ -162,7 +162,7 @@ export const StickyCardsSection = () => {
 							<div className="card-content">
 								<div className="card-heading">
 									<h2 className="card-title">Kapsalon</h2>
-									<p className="card-subtitle">deniz</p>
+									<h2 className="card-subtitle">Deniz</h2>
 								</div>
 								<div className="card-buttons">
 									<a href="/kapsalon" className="card-btn card-btn-primary">
@@ -189,7 +189,7 @@ export const StickyCardsSection = () => {
 							<div className="card-content">
 								<div className="card-heading">
 									<h2 className="card-title">Atelier</h2>
-									<p className="card-subtitle">deniz</p>
+									<h2 className="card-subtitle">Deniz</h2>
 								</div>
 								<div className="card-buttons">
 									<a href="/atelier" className="card-btn card-btn-primary">
@@ -216,7 +216,7 @@ export const StickyCardsSection = () => {
 							<div className="card-content">
 								<div className="card-heading">
 									<h2 className="card-title">Onze</h2>
-									<p className="card-subtitle">Producten</p>
+									<h2 className="card-subtitle">Producten</h2>
 								</div>
 								<div className="card-buttons">
 									<div className="button-wrapper">

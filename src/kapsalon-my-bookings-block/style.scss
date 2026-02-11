@@ -1,11 +1,14 @@
 @import "../shared/styles/shared-style";
 
-/* Ensure the booking wrapper doesn't crop content */
+/* Mijn reserveringen content: 80% width, centered */
 .salon-my-bookings-form-wrapper {
 	overflow: visible !important;
 	min-height: auto !important;
 	height: auto !important;
-	width: 100% !important;
+	width: 80% !important;
+	max-width: 1200px;
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 
 /* Make sure the main booking container isn't restricted */
@@ -15,6 +18,12 @@
 	min-height: 600px !important;
 	height: auto !important;
 	max-width: 100% !important;
+}
+
+/* Override salon background to white */
+#sln-salon.sln-customcolors,
+#sln-salon.sln-customcolors .sln-box_bottombar .sln-box_bottombar_fkbg::before {
+	background-color: #fff !important;
 }
 
 /* Fix if it's a parent container issue */

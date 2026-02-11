@@ -163,11 +163,22 @@
 
 .atelierSection {
 	position: absolute;
-	bottom: 100px;
-	right: 25%;
-	transform: translateX(50%);
+	bottom: 15%;
+	right: 12%;
+	transform: translateX(0);
 	width: 500px;
-	height: 500px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+// Desktop: atelier block a bit more in the corner (lower)
+@media (min-width: 1025px) {
+	.atelierSection {
+		bottom: 6%;
+		right: 8%;
+	}
 }
 
 .atelierTextOverlays {
@@ -233,11 +244,29 @@
 	opacity: 1;
 }
 
+// Kapsalon: tagline align left with Kapsalon Deniz heading (same left edge)
+.textOverlays .Subtitle {
+	text-align: left;
+	margin-left: 50px;
+	width: 100%;
+	max-width: 400px;
+	box-sizing: border-box;
+}
+
+// Atelier: tagline align right with Atelier Deniz heading (same right edge)
+.atelierTextOverlays .Subtitle {
+	text-align: right;
+	margin-left: 150px;
+	margin-right: 0;
+	width: calc(100% - 150px);
+	box-sizing: border-box;
+}
+
 .atelierImageFrame {
-	position: absolute;
-	top: 140px;
-	left: 50%;
-	transform: translateX(-50%);
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: none;
 	width: 400px;
 	height: 400px;
 	border: none;
@@ -246,6 +275,7 @@
 	box-shadow: none;
 	z-index: 32;
 	pointer-events: auto;
+	flex-shrink: 0;
 }
 
 .atelierImage {
@@ -257,20 +287,50 @@
 	z-index: 2;
 }
 
+// Wrapper: image frame with button overlapping on top of it (button at bottom of image)
+.imageButtonGroup {
+	position: relative;
+	z-index: 32;
+	flex-shrink: 0;
+}
+
+.imageButtonGroup-primary {
+	margin-top: 25px;
+}
+
+.imageButtonGroup-secondary {
+	margin-top: 140px; // Space below atelier title/subtitle
+}
+
 .barberSection {
 	position: absolute;
-	top: 140px;
-	left: 180px;
+	top: 22%;
+	left: 12%;
 	width: 500px;
-	height: 500px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	transform: translateX(-52px);
+}
+
+// Button overlaps bottom of image frame (sits on top of image)
+.imageButtonGroup .CTAButton.is-primary,
+.imageButtonGroup .CTAButton.is-secondary {
+	position: absolute;
+	bottom: 1rem;
+	z-index: 40;
+	pointer-events: auto;
 }
 
 .barberSection .CTAButton.is-primary {
-	position: absolute;
-	top: 360px;
-	left: 80px;
-	z-index: 40;
-	pointer-events: auto;
+	left: 55px;
+}
+
+.imageButtonGroup-secondary .CTAButton.is-secondary {
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 1.5rem; /* 8px higher than default 1rem */
 }
 
 .textOverlays {
@@ -322,9 +382,9 @@
 
 // Main image - Kapsalon-image.png with barber and tools
 .mainImageFrame {
-	position: absolute;
-	top: 25px;
-	left: 0;
+	position: relative;
+	top: auto;
+	left: auto;
 	width: 400px;
 	height: 400px;
 	border: none;
@@ -334,6 +394,7 @@
 	z-index: 32;
 	padding-top: 80px;
 	pointer-events: auto;
+	flex-shrink: 0;
 }
 
 .mainImage {
@@ -380,14 +441,15 @@
 // Buttons - positioned to straddle diagonal line
 .CTAButton {
 	width: 298px;
-	height: 68px;
+	min-height: 2.75rem;
 	border: none;
-	padding: 0;
-	border-radius: 24px;
+	padding: 0.75rem 1.5rem;
+	box-sizing: border-box;
+	border-radius: 16px;
 	font-family: 'Poppins', sans-serif;
-	font-size: 24px;
+	font-size: 1rem;
 	font-weight: 400;
-	line-height: 68px;
+	line-height: 1.2;
 	letter-spacing: 0%;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -415,26 +477,16 @@
 .CTAButton.is-primary {
 	background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
 	color: white;
-	box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
-
-	&:hover {
-		box-shadow: 0 8px 30px rgba(255, 107, 107, 0.4);
-	}
 }
 
 .CTAButton.is-secondary {
-	position: absolute;
-	bottom: 15px;
-	right: 200px;
+	position: relative;
+	bottom: auto;
+	right: auto;
 	background: #3D4D3E;
 	color: white;
-	box-shadow: 0 5px 20px rgba(61, 77, 62, 0.3);
 	z-index: 40;
 	pointer-events: auto;
-
-	&:hover {
-		box-shadow: 0 8px 30px rgba(61, 77, 62, 0.4);
-	}
 }
 
 // Responsive styles to ensure content stays on top
@@ -450,16 +502,6 @@
 		}
 	}
 
-	// Adjust button positions to prevent overlap
-	.barberSection .CTAButton.is-primary {
-		top: 340px;
-		left: 60px;
-	}
-
-	.CTAButton.is-secondary {
-		bottom: 20px;
-		right: 150px;
-	}
 
 	.pinkContent,
 	.greenContent {
@@ -482,17 +524,6 @@
 		z-index: 40 !important;
 	}
 
-	// Prevent button overlap on tablets
-	.barberSection .CTAButton.is-primary {
-		top: 320px !important;
-		left: 50px !important;
-	}
-
-	.CTAButton.is-secondary {
-		bottom: 25px !important;
-		right: 120px !important;
-	}
-
 	.content {
 		z-index: 100;
 	}
@@ -500,26 +531,38 @@
 	// Scale down slightly for tablets
 	.barberSection {
 		width: 400px;
-		height: 400px;
+		height: auto;
 	}
 
 	.atelierSection {
 		width: 400px;
-		height: 400px;
+		height: auto;
+	}
+
+	.imageButtonGroup-primary {
+		margin-top: 15px;
+	}
+
+	.imageButtonGroup-primary .CTAButton.is-primary {
+		margin-left: 40px;
+	}
+
+	.imageButtonGroup-secondary {
+		margin-top: 100px;
 	}
 
 	.kapsalonText,
 	.atelierText {
-		font-size: 60px;
+		font-size: 68px;
 	}
 
 	.denizText,
 	.atelierDenizText {
-		font-size: 65px;
+		font-size: 74px;
 	}
 
 	.Subtitle {
-		font-size: 20px;
+		font-size: 22px;
 	}
 
 	.mainImageFrame,
@@ -530,9 +573,10 @@
 
 	.CTAButton {
 		width: 220px;
-		height: 50px;
-		font-size: 18px;
-		line-height: 50px;
+		min-height: 2.75rem;
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+		line-height: 1.2;
 	}
 }
 
@@ -566,16 +610,6 @@
 		z-index: 100;
 	}
 
-	// Prevent button overlap on tablets
-	.barberSection .CTAButton.is-primary {
-		top: 320px !important;
-		left: 50px !important;
-	}
-
-	.CTAButton.is-secondary {
-		bottom: 25px !important;
-		right: 120px !important;
-	}
 }
 
 @media (max-width: 768px) {
@@ -599,32 +633,41 @@
 		overflow: hidden;
 	}
 
-	// Barber section - positioned in pink area, lowered more
+	// Barber section - 501–768px: comfortable spacing (not too close); reset desktop translateX so content isn't clipped on mobile
 	.barberSection {
 		position: absolute;
-		top: 50px;
-		left: 5px;
+		top: 15%;
+		left: 22%;
 		width: 300px;
-		height: 300px;
+		height: auto;
+		transform: translateX(0);
 	}
 
-	// Atelier section - positioned in green area
+	.imageButtonGroup-primary {
+		margin-top: 2rem; /* More space so tagline doesn't overlap image */
+	}
+
+	.imageButtonGroup-secondary {
+		margin-top: 2.5rem; /* More space below atelier tagline */
+	}
+
+	// Atelier section - 501–768px: comfortable gap from Kapsalon (not too close)
 	.atelierSection {
 		position: absolute;
-		bottom: 5px;
-		right: 5px;
+		bottom: 15%;
+		right: 22%;
 		width: 300px;
-		height: 280px;
-		transform: translateX(12%);
+		height: auto;
+		transform: translateX(0);
 	}
 
-	// Text overlays - positioned with slightly tighter spacing, prevent cutoff
+	// Text overlays - positioned with slightly tighter spacing
 	.textOverlays {
 		position: absolute;
 		top: -85px;
 		left: 0px;
 		z-index: 30;
-		padding-left: 5px; // Prevent cutoff on left
+		padding-left: 5px;
 	}
 
 	.atelierTextOverlays {
@@ -650,12 +693,20 @@
 		text-align: left;
 	}
 
+	// Atelier tagline: full width so it isn't cut off on the left, text right-aligned
+	.atelierTextOverlays .Subtitle {
+		margin-left: 0;
+		width: 100%;
+		max-width: 100%;
+		text-align: right;
+	}
+
 	.kapsalonText {
-		font-size: 48px;
+		font-size: 40px;
 	}
 
 	.denizText {
-		font-size: 52px;
+		font-size: 44px;
 	}
 
 	.atelierTitle {
@@ -664,65 +715,69 @@
 	}
 
 	.atelierText {
-		font-size: 48px;
+		font-size: 40px;
 	}
 
 	.atelierDenizText {
-		font-size: 52px;
+		font-size: 44px;
 	}
 
 	.Subtitle {
-		font-size: 16px;
-		margin-top: 8px;
+		font-size: 15px;
+		margin-top: 10px;
+		margin-bottom: 0.5rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 100%;
 	}
 
-	// Images - moved down with section
+	// Images - flow with imageButtonGroup, button stays below
 	.mainImageFrame {
-		position: absolute;
-		top: 30px;
-		left: 0;
+		position: relative;
+		top: auto;
+		left: auto;
 		width: 220px;
 		height: 220px;
 		padding-top: 45px;
 		z-index: 27;
 	}
 
-	// Calculate button position relative to image frame
-	// Image frame: top 30px + padding 45px + height 220px = bottom at ~295px
-	// Button should be just below the frame
-
 	.atelierImageFrame {
-		position: absolute;
-		top: 70px;
-		left: 50%;
-		transform: translateX(-50%);
+		position: relative;
+		top: auto;
+		left: auto;
+		transform: none;
 		width: 220px;
 		height: 220px;
 		z-index: 27;
 	}
 
-	// Buttons - positioned way up, much closer to subtitle text
+	// Buttons - flow below image via flex layout
 	.barberSection .CTAButton.is-primary {
-		position: absolute;
-		top: calc(30px + 45px + 220px - 100px); // Way up, much closer to subtitle
-		left: 25px;
+		position: relative;
+		top: auto;
+		left: auto;
+		margin-left: 25px;
 		width: 170px;
-		height: 42px;
-		font-size: 15px;
-		line-height: 42px;
-		border-radius: 14px;
+		min-height: 2.75rem;
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+		line-height: 1.2;
+		border-radius: 16px;
 		z-index: 35;
 	}
 
 	.CTAButton.is-secondary {
-		position: absolute;
-		bottom: 8px;
-		right: 70px;
+		position: relative;
+		bottom: auto;
+		right: auto;
 		width: 170px;
-		height: 42px;
-		font-size: 15px;
-		line-height: 42px;
-		border-radius: 14px;
+		min-height: 2.75rem;
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+		line-height: 1.2;
+		border-radius: 16px;
 		z-index: 35;
 	}
 
@@ -734,5 +789,20 @@
 
 	.dashedLine {
 		z-index: 15;
+	}
+}
+
+// Below 500px: more top spacing for Kapsalon, blocks a bit closer together
+@media (max-width: 500px) {
+	.barberSection {
+		top: 36px;
+		left: 16px;
+		transform: translateX(0);
+	}
+
+	.atelierSection {
+		bottom: 44px;
+		right: 16px;
+		transform: translateX(0);
 	}
 }

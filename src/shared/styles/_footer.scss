@@ -36,7 +36,7 @@
 	z-index: 1;
 	max-width: 100%;
 	margin: 0 auto;
-	padding: clamp(1.25rem, 2.5vw, 3.5rem) clamp(1.5rem, 2vw, 2.5rem) clamp(1.25rem, 2.5vw, 3.5rem) clamp(2rem, 3vw, 4rem);
+	padding: clamp(2rem, 3vw, 4rem) clamp(1.5rem, 2vw, 2.5rem) clamp(1.25rem, 2.5vw, 3.5rem) clamp(2rem, 3vw, 4rem);
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -135,9 +135,9 @@
 	display: block;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 500;
-	font-size: clamp(12px, 1.25vw, 14px);
-	padding: clamp(0.5rem, 1vw, 0.75rem) clamp(0.75rem, 1.5vw, 1.5rem);
-	border-radius: 6px;
+	font-size: clamp(1rem, 1.25vw, 1.125rem);
+	padding: 1rem 1.5rem;
+	border-radius: 16px;
 	border: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -200,8 +200,8 @@
 	}
 
 	.footer-btn {
-		font-size: clamp(14px, 1.1vw, 17px);
-		padding: clamp(0.75rem, 1vw, 1rem) clamp(1.25rem, 1.5vw, 2rem);
+		font-size: clamp(1rem, 1.1vw, 1.1rem);
+		padding: 1rem 1.5rem;
 	}
 }
 
@@ -323,8 +323,8 @@
 	}
 
 	.footer-btn {
-		font-size: 13px;
-		padding: 0.65rem 1.25rem;
+		font-size: 1rem;
+		padding: 1rem 1.5rem;
 	}
 }
 

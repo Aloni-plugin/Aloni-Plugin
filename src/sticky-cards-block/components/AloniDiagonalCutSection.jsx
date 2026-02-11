@@ -67,32 +67,33 @@ export const DiagonalCutSection = ({
 							<p className="Subtitle">Een prachtig nieuw kapsel....</p>
 						</div>
 
-						<div className="mainImageFrame">
-							<svg className="glowEffect glowEffect-primary" width="683" height="721" viewBox="0 0 683 721" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g opacity="0.54" filter="url(#filter0_f_primary)">
-									<circle cx="322.5" cy="360.5" r="160.5" fill="#F86060" fillOpacity="0.71" />
-								</g>
-								<defs>
-									<filter id="filter0_f_primary" x="-38" y="0" width="721" height="721" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-										<feFlood floodOpacity="0" result="BackgroundImageFix" />
-										<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-										<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_primary" />
-									</filter>
-								</defs>
-							</svg>
-							<img
-								src="/wp-content/plugins/Aloni-Plugin/images/Kapsalon-image.png"
-								alt="Kapsalon with barber and tools"
-								className="mainImage"
-							/>
+						<div className="imageButtonGroup imageButtonGroup-primary">
+							<div className="mainImageFrame">
+								<svg className="glowEffect glowEffect-primary" width="683" height="721" viewBox="0 0 683 721" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g opacity="0.54" filter="url(#filter0_f_primary)">
+										<circle cx="322.5" cy="360.5" r="160.5" fill="#F86060" fillOpacity="0.71" />
+									</g>
+									<defs>
+										<filter id="filter0_f_primary" x="-38" y="0" width="721" height="721" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+											<feFlood floodOpacity="0" result="BackgroundImageFix" />
+											<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+											<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_primary" />
+										</filter>
+									</defs>
+								</svg>
+								<img
+									src="/wp-content/plugins/Aloni-Plugin/images/Kapsalon-image.png"
+									alt="Kapsalon with barber and tools"
+									className="mainImage"
+								/>
+							</div>
+							<button
+								className="CTAButton is-primary"
+								onClick={onButtonClick || (() => window.location.href = '/reserveren')}
+							>
+								Kapper afspraak
+							</button>
 						</div>
-
-						<button
-							className="CTAButton is-primary"
-							onClick={onButtonClick || (() => window.location.href = '/reserveren')}
-						>
-							Kapper afspraak
-						</button>
 					</div>
 				</div>
 
@@ -106,31 +107,33 @@ export const DiagonalCutSection = ({
 							<p className="Subtitle">Of je oude kleding als nieuw?</p>
 						</div>
 
-						<div className="atelierImageFrame">
-							<svg className="glowEffect glowEffect-secondary" width="683" height="721" viewBox="0 0 683 721" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g opacity="0.54" filter="url(#filter0_f_secondary)">
-									<circle cx="322.5" cy="360.5" r="160.5" fill="#3D4D3E" fillOpacity="0.71" />
-								</g>
-								<defs>
-									<filter id="filter0_f_secondary" x="-38" y="0" width="721" height="721" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-										<feFlood floodOpacity="0" result="BackgroundImageFix" />
-										<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-										<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_secondary" />
-									</filter>
-								</defs>
-							</svg>
-							<img
-								src="/wp-content/plugins/Aloni-Plugin/images/Atelier Main.png"
-								alt="Atelier with clothing repair"
-								className="atelierImage"
-							/>
+						<div className="imageButtonGroup imageButtonGroup-secondary">
+							<div className="atelierImageFrame">
+								<svg className="glowEffect glowEffect-secondary" width="683" height="721" viewBox="0 0 683 721" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g opacity="0.54" filter="url(#filter0_f_secondary)">
+										<circle cx="322.5" cy="360.5" r="160.5" fill="#3D4D3E" fillOpacity="0.71" />
+									</g>
+									<defs>
+										<filter id="filter0_f_secondary" x="-38" y="0" width="721" height="721" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+											<feFlood floodOpacity="0" result="BackgroundImageFix" />
+											<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+											<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_secondary" />
+										</filter>
+									</defs>
+								</svg>
+								<img
+									src="/wp-content/plugins/Aloni-Plugin/images/Atelier Main.png"
+									alt="Atelier with clothing repair"
+									className="atelierImage"
+								/>
+							</div>
+							<button
+								className="CTAButton is-secondary"
+								onClick={onButtonClick || (() => window.location.href = '/contact')}
+							>
+								Contact opnemen
+							</button>
 						</div>
-						<button
-							className="CTAButton is-secondary"
-							onClick={onButtonClick || (() => window.location.href = '/contact')}
-						>
-							Contact opnemen
-						</button>
 					</div>
 				</div>
 
