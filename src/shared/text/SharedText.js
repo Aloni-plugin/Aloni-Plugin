@@ -118,9 +118,9 @@ export const SharedText = {
 					borderColor: "#ffffff"
 				},
 				photos: [
-					"/wp-content/plugins/Aloni-plugin/images/barber-information-1.png",
-					"/wp-content/plugins/Aloni-plugin/images/barber-information-2.png",
-					"/wp-content/plugins/Aloni-plugin/images/barber-information-3.png",
+					"/wp-content/plugins/Aloni-Plugin/images/haircut-men1.png",
+					"/wp-content/plugins/Aloni-Plugin/images/haircut-men2.png",
+					"/wp-content/plugins/Aloni-Plugin/images/haircut-men3.png",
 				]
 			},
 			women: {
@@ -142,9 +142,9 @@ export const SharedText = {
 					borderColor: "#ffffff"
 				},
 				photos: [
-					"/wp-content/plugins/Aloni-plugin/images/barber-information-1.png",
-					"/wp-content/plugins/Aloni-plugin/images/barber-information-2.png",
-					"/wp-content/plugins/Aloni-plugin/images/barber-information-3.png",
+					"/wp-content/plugins/Aloni-Plugin/images/haircut-women1.png",
+					"/wp-content/plugins/Aloni-Plugin/images/haircut-women2.png",
+					"/wp-content/plugins/Aloni-Plugin/images/haircut-women3.png",
 				]
 			}
 		},

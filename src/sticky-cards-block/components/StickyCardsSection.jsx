@@ -13,7 +13,7 @@ export const StickyCardsSection = () => {
 
 	useEffect(() => {
 		// Set body background
-		document.body.style.background = 'url("https://www.publicdomainpictures.net/pictures/610000/velka/seamless-floral-wallpaper-art-1715193626Gct.jpg") center center';
+		document.body.style.background = 'url("/wp-content/plugins/Aloni-Plugin/images/texture.jpg") center center';
 		document.body.style.backgroundSize = '500px';
 		document.body.style.animation = 'moveBackground 60s linear infinite';
 		document.body.style.backgroundAttachment = 'fixed';
