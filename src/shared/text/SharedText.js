@@ -106,7 +106,7 @@ export const SharedText = {
 					"Bij Kapsalon Deniz ben je altijd aan het goede adres; zowel jong als oud. We luisteren goed naar je wensen en zorgen er voor dat je tevreden de deur uit gaat!",
 					"Naast natuurlijk de nieuwste modellen voor mannen, scheren wij baarden. Omdat we erg zorgzaam met onze klanten omgaan, scheren we natuurlijk even als vendbaarden dorhalen en alles wat u echt hoeft nog mee. En dat altijd voor dezelfde prijs."
 				],
-				backgroundColor: "#4A5D52",
+				backgroundColor: "#3D4D3E",
 				textColor: "#ffffff",
 				primaryButton: {
 					text: "Afspraak maken",
@@ -155,7 +155,7 @@ export const SharedText = {
 				"Met de drukke wereld waarin we leven, heb je misschien niet altijd de tijd om aanpassingen voor jezelf, je familie of je huis te doen. Wij zijn gespecialiseerd in het maken en herstellen van kleding, gordijnen, banken, hoezen, maar bijvoorbeeld ook scooterzadels en autobekleding.",
 				"Onze ervaren medewerkers weten hoe ze het materiaal moeten repareren en alles er als nieuw uit kunnen laten zien."
 			],
-			backgroundColor: "#4A5D52",
+			backgroundColor: "#3D4D3E",
 			textColor: "#ffffff",
 			primaryButton: {
 				text: "Neem contact op",

@@ -19,7 +19,7 @@ function normalizeToHex(color) {
 const CORAL_HEXES = ['#f86060', '#f26b6b'];
 const GREEN_HEXES = ['#4a5d52', '#3d4d3e'];
 
-function getContrastingButtonColor(backgroundColor, { contrastCoral = '#F86060', contrastGreen = '#4A5D52' } = {}) {
+function getContrastingButtonColor(backgroundColor, { contrastCoral = '#F86060', contrastGreen = '#3D4D3E' } = {}) {
 	const hex = normalizeToHex(backgroundColor);
 	if (CORAL_HEXES.includes(hex)) return contrastGreen;
 	if (GREEN_HEXES.includes(hex)) return contrastCoral;
@@ -35,7 +35,7 @@ export const InformationWithPhotos = ({
 										  buttonPrimaryColor = '#F86060',
 										  buttonSecondaryBorder = '#ffffff',
 										  contrastCoral = '#F86060',
-										  contrastGreen = '#4A5D52',
+										  contrastGreen = '#3D4D3E',
 										  photos = [],
 										  primaryButton = {},
 										  secondaryButton = {}

@@ -1,5 +1,5 @@
 .diagonalContainer {
-	border-radius: 80px;
+	border-radius: 40px;
 	overflow: visible;
 	margin: 32px;
 	height: calc(100vh - 96px);
@@ -11,9 +11,9 @@
 	position: relative;
 	height: 100%;
 	overflow: visible;
-	border-radius: 80px;
+	border-radius: 40px;
 	// Clip background to border-radius while allowing content overflow
-	clip-path: inset(0 round 80px);
+	clip-path: inset(0 round 40px);
 }
 
 
@@ -495,10 +495,10 @@
 	.diagonalContainer {
 		margin: 24px;
 		height: calc(100vh - 48px);
-		border-radius: 60px;
+		border-radius: 40px;
 
 		&::before {
-			border-radius: 60px;
+			border-radius: 40px;
 		}
 	}
 
@@ -583,8 +583,8 @@
 // Large tablets and smaller desktops
 @media (max-width: 1024px) {
 	.diagonalSection {
-		border-radius: 60px;
-		clip-path: inset(0 round 60px);
+		border-radius: 40px;
+		clip-path: inset(0 round 40px);
 	}
 
 	.pinkContent,
