@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getImageUrl } from '../../shared/utils/pluginConfig';
 import '@fontsource/licorice';
 import '@fontsource/poppins';
 
@@ -36,7 +37,7 @@ export const DiagonalCutSection = ({
 				>
 					{showWavyLines && (
 						<img
-							src="/wp-content/plugins/Aloni-Plugin/images/wavy-lines.svg"
+							src={getImageUrl('wavy-lines.svg')}
 							alt="Wavy lines decoration"
 							className="wavyLines"
 						/>
@@ -49,7 +50,7 @@ export const DiagonalCutSection = ({
 				>
 					{showLeafs && (
 						<img
-							src="/wp-content/plugins/Aloni-Plugin/images/moving-leafs.svg"
+							src={getImageUrl('moving-leafs.svg')}
 							alt="Leaf decorations"
 							className="movingLeafs"
 						/>
@@ -82,14 +83,14 @@ export const DiagonalCutSection = ({
 									</defs>
 								</svg>
 								<img
-									src="/wp-content/plugins/Aloni-Plugin/images/Kapsalon-image.png"
+									src={getImageUrl('Kapsalon-image.png')}
 									alt="Kapsalon with barber and tools"
 									className="mainImage"
 								/>
 							</div>
 							<button
 								className="CTAButton is-primary"
-								onClick={onButtonClick || (() => window.location.href = '/reserveren')}
+								onClick={onButtonClick || (() => window.location.href = '/yamato/reserveren')}
 							>
 								Kapper afspraak
 							</button>
@@ -122,14 +123,14 @@ export const DiagonalCutSection = ({
 									</defs>
 								</svg>
 								<img
-									src="/wp-content/plugins/Aloni-Plugin/images/Atelier Main.png"
+									src={getImageUrl('Atelier Main.png')}
 									alt="Atelier with clothing repair"
 									className="atelierImage"
 								/>
 							</div>
 							<button
 								className="CTAButton is-secondary"
-								onClick={onButtonClick || (() => window.location.href = '/contact')}
+								onClick={onButtonClick || (() => window.location.href = '/yamato/contact')}
 							>
 								Contact opnemen
 							</button>

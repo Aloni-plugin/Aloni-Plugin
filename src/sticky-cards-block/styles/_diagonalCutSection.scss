@@ -615,7 +615,7 @@
 @media (max-width: 768px) {
 	.diagonalContainer {
 		margin: 16px;
-		height: calc(100vh - 96px);
+		min-height: 640px;
 		border-radius: 40px;
 		overflow: hidden;
 		position: relative;

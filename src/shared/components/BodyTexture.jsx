@@ -1,10 +1,15 @@
 import { useEffect } from 'react';
+import { getImageUrl } from '../utils/pluginConfig';
+
+const MOBILE_BREAKPOINT = 768;
+const DESKTOP_ANIMATION = 'moveBackground 60s linear infinite';
+const MOBILE_ANIMATION = 'moveBackground 480s linear infinite';
 
 const TEXTURE_STYLES = {
-	background: 'url("/wp-content/plugins/Aloni-Plugin/images/texture.jpg") center center',
+	background: `url("${getImageUrl('texture.jpg')}") center center`,
 	backgroundSize: '500px',
 	backgroundAttachment: 'fixed',
-	animation: 'moveBackground 60s linear infinite',
+	animation: DESKTOP_ANIMATION,
 };
 
 /**
@@ -14,13 +19,17 @@ const TEXTURE_STYLES = {
  */
 export const BodyTexture = () => {
 	useEffect(() => {
+		const isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
 		const prev = {
 			background: document.body.style.background,
 			backgroundSize: document.body.style.backgroundSize,
 			backgroundAttachment: document.body.style.backgroundAttachment,
 			animation: document.body.style.animation,
 		};
-		Object.assign(document.body.style, TEXTURE_STYLES);
+		Object.assign(document.body.style, {
+			...TEXTURE_STYLES,
+			animation: isMobile ? MOBILE_ANIMATION : DESKTOP_ANIMATION,
+		});
 		return () => {
 			document.body.style.background = prev.background;
 			document.body.style.backgroundSize = prev.backgroundSize;

@@ -1,3 +1,5 @@
+import { getImageUrl } from '../utils/pluginConfig';
+
 export const ContactCards = () => {
 	return (
 		<section className="contact-cards-section">
@@ -41,7 +43,7 @@ export const ContactCards = () => {
 				{/* Image positioned on top of both cards */}
 				<div className="contact-card-image">
 					<img
-						src="/wp-content/plugins/Aloni-Plugin/images/contact-location.png"
+						src={getImageUrl('contact-location.png')}
 						alt="Donkerestraat 37-A, 3862 NA Ermelo"
 					/>
 				</div>

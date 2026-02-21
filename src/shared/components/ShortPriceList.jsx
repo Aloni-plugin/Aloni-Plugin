@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImageUrl } from '../utils/pluginConfig';
 
 export const ShortPriceList = ({
 								   title,
@@ -18,7 +19,7 @@ export const ShortPriceList = ({
 
 				<img
 					className="price-list-book"
-					src="/wp-content/plugins/Aloni-Plugin/images/book.png"
+					src={getImageUrl('book.png')}
 					alt=""
 					loading="lazy"
 				/>

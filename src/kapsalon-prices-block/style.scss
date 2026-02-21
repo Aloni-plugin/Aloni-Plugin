@@ -228,6 +228,14 @@
 }
 
 @media (max-width: 600px) {
+	.prijslijst-categories-wrap {
+		display: none;
+	}
+
+	.prijslijst-content {
+		margin-top: 0;
+	}
+
 	.prijslijst-category-btn {
 		font-size: 24px;
 	}

@@ -1,18 +1,20 @@
+import { getImageUrl } from '../utils/pluginConfig';
+
 export const SharedText = {
 	hero: {
 		barber: {
-			image: "/wp-content/plugins/Aloni-Plugin/images/kapsalon-homepage.png",
+			image: getImageUrl('kapsalon-homepage.png'),
 			heading: "Klaar voor iets nieuws?",
 			primaryButton: {
 				text: "Afspraak maken",
-				href: "/reserveren",
+				href: "/yamato/reserveren",
 				backgroundColor: "#F26B6B",
 				textColor: "#ffffff",
 				icon: "📅"
 			},
 			secondaryButton: {
 				text: "Onze prijslijst",
-				href: "/kapper-prijslijst",
+				href: "/yamato/kapper-prijslijst",
 				backgroundColor: "#ffffff",
 				textColor: "#F26B6B",
 				borderColor: "#F26B6B",
@@ -23,8 +25,16 @@ export const SharedText = {
 				bottomText: "Deniz"
 			}
 		},
+		producten: {
+			image: getImageUrl('kapsalon-homepage.png'),
+			heading: "Bekijk onze unieke geurtjes",
+			logo: {
+				topText: "Kapsalon",
+				bottomText: "Deniz"
+			}
+		},
 		reservation: {
-			image: "/wp-content/plugins/Aloni-Plugin/images/kapsalon-homepage.png",
+			image: getImageUrl('kapsalon-homepage.png'),
 			heading: "Klaar voor iets nieuws?",
 			logo: {
 				topText: "Kapsalon",
@@ -32,17 +42,17 @@ export const SharedText = {
 			}
 		},
 		tailor: {
-			image: "/wp-content/plugins/Aloni-Plugin/images/kleding-reperatie-hero.png",
+			image: getImageUrl('kleding-reperatie-hero.png'),
 			heading: "Klaar voor iets nieuws?",
 			primaryButton: {
 				text: "Neem contact op",
-				href: "/contact",
+				href: "/yamato/contact",
 				backgroundColor: "#3D4D3E",
 				textColor: "#ffffff"
 			},
 			secondaryButton: {
 				text: "Onze prijslijst",
-				href: "/atelier-prijslijst",
+				href: "/yamato/atelier-prijslijst",
 				backgroundColor: "transparent",
 				textColor: "#3D4D3E",
 				borderColor: "#3D4D3E"
@@ -53,22 +63,14 @@ export const SharedText = {
 			}
 		},
 		contact: {
-			image: "/wp-content/plugins/Aloni-Plugin/images/kapsalon-homepage.png",
+			image: getImageUrl('kapsalon-homepage.png'),
 			heading: "Neem contact op",
 			primaryButton: {
 				text: "Afspraak maken",
-				href: "/reserveren",
+				href: "/yamato/reserveren",
 				backgroundColor: "#F26B6B",
 				textColor: "#ffffff",
 				icon: "📅"
-			},
-			secondaryButton: {
-				text: "Onze prijslijst",
-				href: "/kapper-prijslijst",
-				backgroundColor: "#ffffff",
-				textColor: "#F26B6B",
-				borderColor: "#F26B6B",
-				icon: "📋"
 			},
 			logo: {
 				topText: "Kapsalon",
@@ -76,17 +78,17 @@ export const SharedText = {
 			}
 		},
 		reviews: {
-			image: "/wp-content/plugins/Aloni-Plugin/images/kapsalon-homepage.png",
+			image: getImageUrl('kapsalon-homepage.png'),
 			heading: "Wat onze klanten zeggen",
 			primaryButton: {
 				text: "Afspraak maken",
-				href: "/afspraak",
+				href: "/yamato/afspraak",
 				backgroundColor: "#F86060",
 				textColor: "#ffffff"
 			},
 			secondaryButton: {
 				text: "Onze prijslijst",
-				href: "/prijslijst",
+				href: "/yamato/prijslijst",
 				backgroundColor: "transparent",
 				textColor: "#ffffff",
 				borderColor: "#ffffff"
@@ -110,17 +112,17 @@ export const SharedText = {
 				textColor: "#ffffff",
 				primaryButton: {
 					text: "Afspraak maken",
-					href: "/reserveren"
+					href: "/yamato/reserveren"
 				},
 				secondaryButton: {
 					text: "Onze prijslijst",
-					href: "/kapper-prijslijst",
+					href: "/yamato/kapper-prijslijst",
 					borderColor: "#ffffff"
 				},
 				photos: [
-					"/wp-content/plugins/Aloni-Plugin/images/haircut-men1.png",
-					"/wp-content/plugins/Aloni-Plugin/images/haircut-men2.png",
-					"/wp-content/plugins/Aloni-Plugin/images/haircut-men3.png",
+					getImageUrl('haircut-men1.png'),
+					getImageUrl('haircut-men2.png'),
+					getImageUrl('haircut-men3.png'),
 				]
 			},
 			women: {
@@ -134,17 +136,17 @@ export const SharedText = {
 				textColor: "#ffffff",
 				primaryButton: {
 					text: "Afspraak maken",
-					href: "/reserveren"
+					href: "/yamato/reserveren"
 				},
 				secondaryButton: {
 					text: "Onze prijslijst",
-					href: "/kapper-prijslijst",
+					href: "/yamato/kapper-prijslijst",
 					borderColor: "#ffffff"
 				},
 				photos: [
-					"/wp-content/plugins/Aloni-Plugin/images/haircut-women1.png",
-					"/wp-content/plugins/Aloni-Plugin/images/haircut-women2.png",
-					"/wp-content/plugins/Aloni-Plugin/images/haircut-women3.png",
+					getImageUrl('haircut-women1.png'),
+					getImageUrl('haircut-women2.png'),
+					getImageUrl('haircut-women3.png'),
 				]
 			}
 		},
@@ -159,18 +161,18 @@ export const SharedText = {
 			textColor: "#ffffff",
 			primaryButton: {
 				text: "Neem contact op",
-				href: "/contact",
+				href: "/yamato/contact",
 				backgroundColor: "#F86060"
 			},
 			secondaryButton: {
 				text: "Onze prijslijst",
-				href: "/atelier-prijslijst",
+				href: "/yamato/atelier-prijslijst",
 				borderColor: "#ffffff"
 			},
 			photos: [
-				"/wp-content/plugins/Aloni-plugin/images/tailor-information-1.png",
-				"/wp-content/plugins/Aloni-plugin/images/tailor-information-2.png",
-				"/wp-content/plugins/Aloni-plugin/images/tailor-information-3.png",
+				getImageUrl('tailor-information-1.png'),
+				getImageUrl('tailor-information-2.png'),
+				getImageUrl('tailor-information-3.png'),
 			]
 		}
 	},
@@ -178,19 +180,19 @@ export const SharedText = {
 		title: "Onze prijslijst",
 		priceItems: [
 			{ name: "Colbert korter/langer maken", price: "€20,-" },
-			{ name: "Blouse of Overhemd korter of langer maken", price: "€8,-" },
-			{ name: "Nieuwe rits voor pantalon of jeans", price: "€25,50" },
-			{ name: "Knopen aanzetten", price: "€4,-" }
+			{ name: "Blouse of overhemd korter of langer maken", price: "€15,-" },
+			{ name: "Nieuwe rits voor pantalon of jeans", price: "€15,-" },
+			{ name: "Knopen aanzetten", price: "€7,-" }
 		],
 		ctaText: "Wat nog meer?",
 		backgroundColor: "#3D4D3E",
 		primaryButton: {
 			text: "Neem contact op",
-			href: "/contact"
+			href: "/yamato/contact"
 		},
 		secondaryButton: {
 			text: "Volledige prijslijst",
-			href: "/atelier-prijslijst"
+			href: "/yamato/atelier-prijslijst"
 		}
 	}
 }

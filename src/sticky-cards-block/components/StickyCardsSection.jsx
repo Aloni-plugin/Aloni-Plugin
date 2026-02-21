@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getImageUrl } from '../../shared/utils/pluginConfig';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -148,10 +149,10 @@ export const StickyCardsSection = () => {
 			<div className="card-container" ref={cardContainerRef}>
 				<div className="card" id="card-1" ref={card1Ref}>
 					<div className="card-front">
-						<img src="/wp-content/plugins/Aloni-Plugin/images/Main-card-left.png" alt="Left Section"/>
+						<img src={getImageUrl('Main-card-left.png')} alt="Left Section"/>
 					</div>
 					<div className="card-back">
-						<img src="/wp-content/plugins/Aloni-Plugin/images/card-back-1.png" alt="Card 1 back"/>
+						<img src={getImageUrl('card-back-1.png')} alt="Card 1 back"/>
 						<div className="card-overlay">
 							<div className="card-content">
 								<div className="card-heading">
@@ -159,11 +160,11 @@ export const StickyCardsSection = () => {
 									<h2 className="card-subtitle">Deniz</h2>
 								</div>
 								<div className="card-buttons">
-									<a href="/kapsalon" className="card-btn card-btn-primary">
+									<a href="/yamato/kapsalon" className="card-btn card-btn-primary">
 										<span className="btn-icon">🏠</span>
 										Over de salon
 									</a>
-									<a href="/kapper-prijslijst" className="card-btn card-btn-secondary">
+									<a href="/yamato/kapper-prijslijst" className="card-btn card-btn-secondary">
 										<span className="btn-icon">📋</span>
 										Onze prijslijst
 									</a>
@@ -175,10 +176,10 @@ export const StickyCardsSection = () => {
 
 				<div className="card" id="card-2" ref={card2Ref}>
 					<div className="card-front">
-						<img src="/wp-content/plugins/Aloni-Plugin/images/Main-card-center.png" alt="Center Section"/>
+						<img src={getImageUrl('Main-card-center.png')} alt="Center Section"/>
 					</div>
 					<div className="card-back">
-						<img src="/wp-content/plugins/Aloni-Plugin/images/card-back-2.png" alt="Card 2 back"/>
+						<img src={getImageUrl('card-back-2.png')} alt="Card 2 back"/>
 						<div className="card-overlay">
 							<div className="card-content">
 								<div className="card-heading">
@@ -186,11 +187,11 @@ export const StickyCardsSection = () => {
 									<h2 className="card-subtitle">Deniz</h2>
 								</div>
 								<div className="card-buttons">
-									<a href="/atelier" className="card-btn card-btn-primary">
+									<a href="/yamato/atelier" className="card-btn card-btn-primary">
 										<span className="btn-icon">🏠</span>
 										Over het atelier
 									</a>
-									<a href="/atelier-prijslijst" className="card-btn card-btn-secondary">
+									<a href="/yamato/atelier-prijslijst" className="card-btn card-btn-secondary">
 										<span className="btn-icon">📋</span>
 										Onze prijslijst
 									</a>
@@ -202,10 +203,10 @@ export const StickyCardsSection = () => {
 
 				<div className="card" id="card-3" ref={card3Ref}>
 					<div className="card-front">
-						<img src="/wp-content/plugins/Aloni-Plugin/images/Main-card-right.png" alt="Right Section"/>
+						<img src={getImageUrl('Main-card-right.png')} alt="Right Section"/>
 					</div>
 					<div className="card-back">
-						<img src="/wp-content/plugins/Aloni-Plugin/images/card-back-3.png" alt="Card 3 back"/>
+						<img src={getImageUrl('card-back-3.png')} alt="Card 3 back"/>
 						<div className="card-overlay">
 							<div className="card-content">
 								<div className="card-heading">
@@ -213,13 +214,10 @@ export const StickyCardsSection = () => {
 									<h2 className="card-subtitle">Producten</h2>
 								</div>
 								<div className="card-buttons">
-									<div className="button-wrapper">
-										<button className="card-btn card-btn-primary" disabled>
-											<span className="btn-icon">🛍️</span>
-											Onze producten
-										</button>
-										<span className="coming-soon-badge">Binnenkort</span>
-									</div>
+									<a href="/yamato/producten" className="card-btn card-btn-primary">
+										<span className="btn-icon">🛍️</span>
+										Onze producten
+									</a>
 								</div>
 							</div>
 						</div>
@@ -228,12 +226,12 @@ export const StickyCardsSection = () => {
 
 				{/* Scissors AFTER cards */}
 				<img
-					src="/wp-content/plugins/Aloni-Plugin/images/scissors.png"
+					src={getImageUrl('scissors.png')}
 					alt=""
 					className="scissors-left"
 				/>
 				<img
-					src="/wp-content/plugins/Aloni-Plugin/images/scissors.png"
+					src={getImageUrl('scissors.png')}
 					alt=""
 					className="scissors-right"
 				/>

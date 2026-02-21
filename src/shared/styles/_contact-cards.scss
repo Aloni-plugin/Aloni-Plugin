@@ -7,7 +7,7 @@
 	min-height: 550px;
 	height: 800px;
 	color: rgba(255, 255, 255, 1);
-	background-color: rgba(255, 255, 255, 1);
+	background: transparent;
 }
 
 .contact-cards-container {
@@ -91,7 +91,7 @@
 	z-index: 2;
 	border-radius: 20px;
 	overflow: hidden;
-	background-color: #FFFFFF;
+	background: transparent;
 
 	img {
 		width: 100%;

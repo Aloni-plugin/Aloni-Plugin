@@ -58,6 +58,24 @@ function create_block_aloni_plugin_block_init() {
 }
 add_action( 'init', 'create_block_aloni_plugin_block_init' );
 
+/**
+ * Localize plugin URL for frontend scripts
+ */
+function aloni_plugin_localize_scripts() {
+	$plugin_url = plugin_dir_url( __FILE__ );
+	
+	wp_add_inline_script(
+		'wp-element',
+		sprintf(
+			'window.aloniPluginConfig = window.aloniPluginConfig || {}; window.aloniPluginConfig.pluginUrl = %s;',
+			wp_json_encode( $plugin_url )
+		),
+		'before'
+	);
+}
+add_action( 'wp_enqueue_scripts', 'aloni_plugin_localize_scripts' );
+add_action( 'admin_enqueue_scripts', 'aloni_plugin_localize_scripts' );
+
 // Render function for your booking page block
 function render_kapsalon_booking_block() {
     ob_start();

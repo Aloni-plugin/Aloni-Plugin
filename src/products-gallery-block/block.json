@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aloni-blocks/products-gallery-block",
+	"version": "0.1.0",
+	"title": "Producten Galerij",
+	"category": "widgets",
+	"icon": "images-alt2",
+	"description": "Product gallery met niet-klikbare items en prijzen",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "products-gallery",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
