@@ -1,5 +1,5 @@
 import { createRoot } from '@wordpress/element';
-import { Navigation, ContactCards, HeroSection, Footer } from '../shared/components';
+import { BodyTexture, Navigation, ContactCards, HeroSection, Footer } from '../shared/components';
 import {SharedText} from "../shared/text/SharedText";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const root = createRoot(container);
 		root.render(
 			<>
+				<BodyTexture />
 				<Navigation />
 				<HeroSection {...SharedText.hero.reservation} useDesignLayout />
 				{/* React will render here, booking form is below as sibling */}

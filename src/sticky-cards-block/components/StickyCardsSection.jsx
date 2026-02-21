@@ -12,12 +12,6 @@ export const StickyCardsSection = () => {
 	const card3Ref = useRef(null);
 
 	useEffect(() => {
-		// Set body background
-		document.body.style.background = 'url("/wp-content/plugins/Aloni-Plugin/images/texture.jpg") center center';
-		document.body.style.backgroundSize = '500px';
-		document.body.style.animation = 'moveBackground 60s linear infinite';
-		document.body.style.backgroundAttachment = 'fixed';
-
 		const ctx = gsap.context(() => {
 			const cards = [card1Ref.current, card2Ref.current, card3Ref.current];
 
